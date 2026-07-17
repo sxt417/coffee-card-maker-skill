@@ -1,4 +1,0 @@
-interface:
-  display_name: "Coffee Card Maker"
-  short_description: "根据咖啡名称与风味词生成中英文有机颗粒渐变风味卡片"
-  default_prompt: "使用 $coffee-card-maker 根据咖啡名称和按强弱排序的风味词，生成一张中文或英文的 3:4 风味渐变卡。"
