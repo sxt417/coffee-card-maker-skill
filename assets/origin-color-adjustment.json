@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "fallback": "neutral",
+  "origin_adjustments": {
+    "ethiopia": {
+      "aliases": ["ethiopia", "ethiopian", "埃塞俄比亚", "埃塞", "耶加雪菲", "西达摩", "古吉"],
+      "identity": "floral clarity",
+      "accent": "#D7CCE8",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 1.03, "lightness_shift": 0.012, "temperature_shift": -0.008}
+    },
+    "kenya": {
+      "aliases": ["kenya", "kenyan", "肯尼亚", "涅里", "麒麟雅嘉"],
+      "identity": "berry brightness",
+      "accent": "#C94F68",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 1.06, "lightness_shift": 0.0, "temperature_shift": -0.004}
+    },
+    "panama": {
+      "aliases": ["panama", "panamanian", "巴拿马", "波奎特"],
+      "identity": "tropical clarity",
+      "accent": "#F1CA62",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 1.04, "lightness_shift": 0.014, "temperature_shift": 0.006}
+    },
+    "colombia": {
+      "aliases": ["colombia", "colombian", "哥伦比亚", "慧兰", "考卡", "纳里尼奥"],
+      "identity": "balanced warmth",
+      "accent": "#D99560",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 1.01, "lightness_shift": 0.004, "temperature_shift": 0.008}
+    },
+    "costa_rica": {
+      "aliases": ["costa rica", "costa rican", "哥斯达黎加", "塔拉珠"],
+      "identity": "honeyed brightness",
+      "accent": "#DEAD5B",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 1.02, "lightness_shift": 0.008, "temperature_shift": 0.01}
+    },
+    "brazil": {
+      "aliases": ["brazil", "brazilian", "巴西", "米纳斯吉拉斯", "喜拉多"],
+      "identity": "cocoa warmth",
+      "accent": "#9E704D",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 0.96, "lightness_shift": -0.004, "temperature_shift": 0.01}
+    },
+    "guatemala": {
+      "aliases": ["guatemala", "guatemalan", "危地马拉", "安提瓜"],
+      "identity": "structured warmth",
+      "accent": "#A86F4C",
+      "renderer": {"accent_influence": 0.1, "chroma_scale": 0.99, "lightness_shift": -0.003, "temperature_shift": 0.008}
+    },
+    "neutral": {
+      "aliases": [],
+      "identity": "no origin adjustment",
+      "accent": "#B7B7B7",
+      "renderer": {"accent_influence": 0.0, "chroma_scale": 1.0, "lightness_shift": 0.0, "temperature_shift": 0.0}
+    }
+  }
+}

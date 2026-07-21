@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+
+# Fonts are intentionally not distributed in this public repository.
+assets/fonts/
+*.otf
+*.ttf
+*.ttc

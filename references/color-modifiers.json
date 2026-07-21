@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0.0",
+  "modifierRules": [
+    {
+      "id": "fresh",
+      "tokens": [
+        "新鲜",
+        "鲜",
+        "fresh",
+        "bright",
+        "juicy"
+      ],
+      "lightnessDelta": 0.06,
+      "saturationDelta": 0.04,
+      "hueShiftDegrees": 0,
+      "note": "更明亮、更鲜活"
+    },
+    {
+      "id": "ripe",
+      "tokens": [
+        "成熟",
+        "熟",
+        "ripe",
+        "fully ripe"
+      ],
+      "lightnessDelta": -0.04,
+      "saturationDelta": 0.05,
+      "hueShiftDegrees": 3,
+      "note": "稍深、稍暖、饱和度更高"
+    },
+    {
+      "id": "dried",
+      "tokens": [
+        "干",
+        "干燥",
+        "果干",
+        "dried",
+        "dehydrated"
+      ],
+      "lightnessDelta": -0.09,
+      "saturationDelta": -0.08,
+      "hueShiftDegrees": 4,
+      "note": "降低明度与饱和度，偏褐"
+    },
+    {
+      "id": "jam",
+      "tokens": [
+        "果酱",
+        "酱",
+        "jam",
+        "preserve"
+      ],
+      "lightnessDelta": -0.11,
+      "saturationDelta": 0.06,
+      "hueShiftDegrees": -2,
+      "note": "更浓、更深、更饱和"
+    },
+    {
+      "id": "candy",
+      "tokens": [
+        "糖果",
+        "糖",
+        "candy",
+        "candy-like"
+      ],
+      "lightnessDelta": 0.07,
+      "saturationDelta": 0.1,
+      "hueShiftDegrees": 0,
+      "note": "更亮、更甜、更高饱和"
+    },
+    {
+      "id": "candied",
+      "tokens": [
+        "蜜饯",
+        "糖渍",
+        "蜜渍",
+        "candied",
+        "confit"
+      ],
+      "lightnessDelta": -0.03,
+      "saturationDelta": 0.05,
+      "hueShiftDegrees": 4,
+      "note": "略深、略暖、颜色更浓"
+    },
+    {
+      "id": "peel",
+      "tokens": [
+        "果皮",
+        "皮",
+        "zest",
+        "peel",
+        "rind"
+      ],
+      "lightnessDelta": -0.05,
+      "saturationDelta": 0.04,
+      "hueShiftDegrees": 2,
+      "note": "比果肉更深、更饱和"
+    },
+    {
+      "id": "roasted",
+      "tokens": [
+        "烘烤",
+        "烤",
+        "roasted",
+        "toasted"
+      ],
+      "lightnessDelta": -0.13,
+      "saturationDelta": -0.05,
+      "hueShiftDegrees": 7,
+      "note": "变深、降饱和、偏暖棕"
+    },
+    {
+      "id": "fermented",
+      "tokens": [
+        "发酵",
+        "fermented",
+        "anaerobic",
+        "酵感"
+      ],
+      "lightnessDelta": -0.06,
+      "saturationDelta": 0.03,
+      "hueShiftDegrees": -5,
+      "note": "略深并轻微向红紫偏移"
+    },
+    {
+      "id": "wine_soaked",
+      "tokens": [
+        "酒渍",
+        "酒香",
+        "winey",
+        "wine-like",
+        "boozy"
+      ],
+      "lightnessDelta": -0.12,
+      "saturationDelta": 0.04,
+      "hueShiftDegrees": -8,
+      "mixWith": "#6D2932",
+      "mixAmount": 0.16,
+      "note": "混入少量酒红色"
+    },
+    {
+      "id": "creamy",
+      "tokens": [
+        "奶油",
+        "奶香",
+        "creamy",
+        "milky"
+      ],
+      "lightnessDelta": 0.1,
+      "saturationDelta": -0.08,
+      "hueShiftDegrees": 3,
+      "mixWith": "#F2E6CE",
+      "mixAmount": 0.14,
+      "note": "更浅、更柔和，混入奶油色"
+    },
+    {
+      "id": "honeyed",
+      "tokens": [
+        "蜜感",
+        "蜂蜜感",
+        "honeyed",
+        "honey-like"
+      ],
+      "lightnessDelta": 0.01,
+      "saturationDelta": 0.03,
+      "hueShiftDegrees": 5,
+      "mixWith": "#D79721",
+      "mixAmount": 0.14,
+      "note": "混入少量琥珀蜂蜜色"
+    },
+    {
+      "id": "dark",
+      "tokens": [
+        "深色",
+        "浓郁",
+        "dark",
+        "deep",
+        "intense"
+      ],
+      "lightnessDelta": -0.15,
+      "saturationDelta": 0.02,
+      "hueShiftDegrees": 0,
+      "note": "显著降低明度"
+    },
+    {
+      "id": "delicate",
+      "tokens": [
+        "淡雅",
+        "轻柔",
+        "delicate",
+        "subtle",
+        "light"
+      ],
+      "lightnessDelta": 0.12,
+      "saturationDelta": -0.1,
+      "hueShiftDegrees": 0,
+      "note": "提高明度并降低饱和度"
+    },
+    {
+      "id": "floral",
+      "tokens": [
+        "花香",
+        "floral",
+        "perfumed"
+      ],
+      "lightnessDelta": 0.05,
+      "saturationDelta": -0.02,
+      "hueShiftDegrees": -3,
+      "note": "略亮、略柔和"
+    }
+  ],
+  "familyFallbacks": {
+    "floral": {
+      "categoryZh": "花香",
+      "primary": "#C783A8",
+      "light": "#EEDBE6",
+      "dark": "#7B4966"
+    },
+    "citrus": {
+      "categoryZh": "柑橘",
+      "primary": "#E8C83D",
+      "light": "#F7EDB7",
+      "dark": "#8D7618"
+    },
+    "berry": {
+      "categoryZh": "莓果",
+      "primary": "#A83A61",
+      "light": "#E4B8C9",
+      "dark": "#5E1E37"
+    },
+    "orchard_stone": {
+      "categoryZh": "仁果与核果",
+      "primary": "#D99065",
+      "light": "#F1D5C4",
+      "dark": "#855039"
+    },
+    "tropical_melon": {
+      "categoryZh": "热带水果与瓜果",
+      "primary": "#E7B948",
+      "light": "#F5E6B8",
+      "dark": "#896A1E"
+    },
+    "dried_fruit": {
+      "categoryZh": "干果",
+      "primary": "#84503D",
+      "light": "#D8C1B7",
+      "dark": "#4D2C21"
+    },
+    "sweet_bakery": {
+      "categoryZh": "甜感与烘焙",
+      "primary": "#C18C54",
+      "light": "#EAD5BD",
+      "dark": "#714B27"
+    },
+    "tea_herbal": {
+      "categoryZh": "茶感与草本",
+      "primary": "#748B62",
+      "light": "#D4DDCD",
+      "dark": "#43523A"
+    },
+    "nuts_cocoa": {
+      "categoryZh": "坚果与可可",
+      "primary": "#81583F",
+      "light": "#D7C3B6",
+      "dark": "#4A3022"
+    },
+    "spice": {
+      "categoryZh": "香料",
+      "primary": "#A16B36",
+      "light": "#E3CDB5",
+      "dark": "#5D3B1C"
+    },
+    "boozy_fermented": {
+      "categoryZh": "酒香与发酵",
+      "primary": "#7F3C50",
+      "light": "#D8BECB",
+      "dark": "#481F2C"
+    },
+    "roasted_woody": {
+      "categoryZh": "烘烤与木质",
+      "primary": "#675044",
+      "light": "#CDC1BA",
+      "dark": "#382A24"
+    }
+  }
+}

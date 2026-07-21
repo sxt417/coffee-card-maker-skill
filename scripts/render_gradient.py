@@ -25,7 +25,17 @@ except ImportError as exc:  # pragma: no cover
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 PALETTE_PATH = SKILL_ROOT / "references" / "flavor-colors.json"
+PROCESSING_PATH = SKILL_ROOT / "assets" / "processing-color-system.json"
+ORIGIN_PATH = SKILL_ROOT / "assets" / "origin-color-adjustment.json"
+MOTIF_PATH = SKILL_ROOT / "assets" / "flavor-motif-system.json"
 FONT_DIR = Path.home() / "Library" / "Fonts"
+BUNDLED_FONT_DIR = SKILL_ROOT / "assets" / "fonts"
+BUNDLED_FONTS = {
+    ("en", "coffee"): BUNDLED_FONT_DIR / "PPEditorialNew-Regular.otf",
+    ("en", "flavor"): BUNDLED_FONT_DIR / "SuisseIntlTrial-Medium.otf",
+    ("zh", "coffee"): BUNDLED_FONT_DIR / "MFYueHei_Noncommercial-Regular.otf",
+    ("zh", "flavor"): BUNDLED_FONT_DIR / "FZLTZHJW.TTF",
+}
 SYSTEM_FONTS = {
     ("en", "coffee"): FONT_DIR / "PPEditorialNew-Regular.otf",
     ("en", "flavor"): FONT_DIR / "SuisseIntlTrial-Medium.otf",
@@ -53,6 +63,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--language", choices=("en", "zh"), default="en", help="卡片文字版本：en 英文，zh 中文")
     parser.add_argument("--coffee-name", required=True, help="用于卡片展示的咖啡名称；语言须与 --language 一致")
     parser.add_argument("--display-flavors", required=True, help="用于卡片展示的风味词；语言须与 --language 一致")
+    parser.add_argument("--processing-method", help="可选；处理法名称或别名。省略时从咖啡名称自动识别")
+    parser.add_argument("--origin", help="可选；产地名称或别名。省略时从咖啡名称自动识别")
     parser.add_argument("--coffee-font", help="可选；指定标题字体文件，仍会严格校验字体身份")
     parser.add_argument("--flavor-font", help="可选；指定风味字体文件，仍会严格校验字体身份")
     parser.add_argument("--colors", help="可选；与风味顺序对应、以逗号分隔的 HEX 自定义颜色")
@@ -111,7 +123,7 @@ def resolve_required_font(language: str, role: str, override: str | None) -> Pat
     if override:
         candidates = [Path(override).expanduser()]
     else:
-        candidates = []
+        candidates = [BUNDLED_FONTS[(language, role)]]
         system_font = SYSTEM_FONTS.get((language, role))
         if system_font:
             candidates.append(system_font)
@@ -137,8 +149,8 @@ def resolve_required_font(language: str, role: str, override: str | None) -> Pat
     option = "--coffee-font" if role == "coffee" else "--flavor-font"
     raise FileNotFoundError(
         f"找不到或无法验证指定字体：{expected_font_label(language, role)}。"
-        f"请将合法取得的字体安装到 {FONT_DIR}，或用 {option} 指定字体文件；"
-        f"禁止使用替代字体，且不要将受限字体上传到公开仓库。"
+        f"请检查 skill 内的 {BUNDLED_FONT_DIR}，安装字体到 {FONT_DIR}，"
+        f"或用 {option} 指定字体文件；禁止使用替代字体。"
     )
 
 
@@ -385,6 +397,107 @@ def load_palette() -> dict[str, Any]:
         return json.load(handle)
 
 
+def load_json(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def normalize_detection_text(value: str) -> str:
+    return re.sub(r"[^a-z0-9\u3400-\u9fff]+", " ", value.lower()).strip()
+
+
+def alias_matches(text: str, alias: str) -> bool:
+    normalized_text = f" {normalize_detection_text(text)} "
+    normalized_alias = normalize_detection_text(alias)
+    if not normalized_alias:
+        return False
+    if re.fullmatch(r"[a-z0-9 ]+", normalized_alias):
+        return f" {normalized_alias} " in normalized_text
+    return normalized_alias.replace(" ", "") in normalized_text.replace(" ", "")
+
+
+def detect_profile(
+    explicit: str | None,
+    coffee_name: str,
+    profiles: dict[str, Any],
+    fallback: str,
+    detection_order: list[str] | None = None,
+) -> tuple[str, dict[str, Any], str]:
+    order = detection_order or [key for key in profiles if key != fallback]
+    if explicit:
+        explicit_key = normalize_detection_text(explicit).replace(" ", "_")
+        if explicit_key in profiles:
+            return explicit_key, profiles[explicit_key], "explicit"
+        for key in order:
+            if any(alias_matches(explicit, alias) for alias in profiles[key].get("aliases", [])):
+                return key, profiles[key], "explicit_alias"
+        raise ValueError(f"无法识别指定值：{explicit}")
+
+    for key in order:
+        if any(alias_matches(coffee_name, alias) for alias in profiles[key].get("aliases", [])):
+            return key, profiles[key], "coffee_name"
+    return fallback, profiles[fallback], "fallback"
+
+
+def resolve_motif_candidate(
+    flavor: str,
+    palette_item: dict[str, Any],
+    motif_data: dict[str, Any],
+) -> tuple[str, dict[str, Any], str] | None:
+    motifs = motif_data.get("motifs", {})
+    for key, motif in motifs.items():
+        if any(alias_matches(flavor, alias) for alias in motif.get("aliases", [])):
+            return key, motif, "alias"
+    fallback_key = motif_data.get("family_fallbacks", {}).get(palette_item.get("family"))
+    if fallback_key in motifs:
+        return fallback_key, motifs[fallback_key], "family_fallback"
+    return None
+
+
+def select_flavor_motifs(
+    flavors: list[str],
+    palette: list[dict[str, Any]],
+    motif_data: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Select at most one main and one complementary auxiliary motif."""
+    candidates: list[dict[str, Any]] = []
+    for index, flavor in enumerate(flavors):
+        resolved = resolve_motif_candidate(flavor, palette[index], motif_data)
+        if resolved is None:
+            continue
+        key, motif, source = resolved
+        candidates.append({
+            "flavor_index": index,
+            "flavor": flavor,
+            "motif_key": key,
+            "shape": motif["shape"],
+            "visual_family": motif.get("visual_family"),
+            "source": source,
+            "renderer": motif.get("renderer", {}),
+            "source_metaphor": motif.get("source_metaphor", []),
+        })
+    if not candidates:
+        return []
+
+    main = {**candidates[0], "role": "main"}
+    selected = [main]
+    preferred_shapes = set(
+        motif_data["motifs"][main["motif_key"]].get("preferred_auxiliary_shapes", [])
+    )
+    remaining = candidates[1:]
+    auxiliary = next((item for item in remaining if item["shape"] in preferred_shapes), None)
+    if auxiliary is None:
+        auxiliary = next(
+            (item for item in remaining if item["visual_family"] != main["visual_family"]),
+            None,
+        )
+    if auxiliary is not None:
+        selected.append({**auxiliary, "role": "auxiliary"})
+
+    maximum = int(motif_data.get("selection", {}).get("maximum_motifs", 2))
+    return selected[: max(0, min(maximum, 2))]
+
+
 def infer_family(word: str) -> str:
     norm = normalize_word(word)
     for family, keywords in FAMILY_KEYWORDS.items():
@@ -492,6 +605,102 @@ def oklab_to_linear_srgb(lab: np.ndarray) -> np.ndarray:
     )
 
 
+def srgb_to_hex(rgb: np.ndarray) -> str:
+    channels = np.uint8(np.clip(rgb, 0.0, 1.0) * 255.0 + 0.5)
+    return "#" + "".join(f"{int(channel):02X}" for channel in channels)
+
+
+def apply_chromatic_system(
+    palette: list[dict[str, Any]],
+    processing: dict[str, Any],
+    origin: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Keep flavor as the hue source while processing controls its visual personality."""
+    processing_palette = processing.get("palette", [])
+    processing_renderer = processing.get("renderer", {})
+    origin_renderer = origin.get("renderer", {})
+    transformed: list[dict[str, Any]] = []
+
+    for index, item in enumerate(palette):
+        base_hex = normalize_hex(item["hex"])
+        base_lab = linear_srgb_to_oklab(srgb_to_linear(hex_to_srgb(base_hex)))
+        adjusted = base_lab.copy()
+        undertone_hex: str | None = None
+
+        if processing_palette:
+            undertone_labs = np.stack([
+                linear_srgb_to_oklab(srgb_to_linear(hex_to_srgb(normalize_hex(value))))
+                for value in processing_palette
+            ])
+            base_chroma = base_lab[1:3]
+            undertone_chroma = undertone_labs[:, 1:3]
+            similarity = undertone_chroma @ base_chroma / np.maximum(
+                np.linalg.norm(undertone_chroma, axis=1) * np.linalg.norm(base_chroma),
+                1e-6,
+            )
+            undertone_index = int(np.argmax(similarity))
+            undertone_hex = normalize_hex(processing_palette[undertone_index])
+            undertone_lab = undertone_labs[undertone_index]
+            influence = float(processing_renderer.get("palette_influence", 0.0))
+            adjusted = adjusted * (1.0 - influence) + undertone_lab * influence
+
+        adjusted[1:3] *= float(processing_renderer.get("chroma_scale", 1.0))
+        adjusted[0] += float(processing_renderer.get("lightness_shift", 0.0))
+        adjusted[2] += float(processing_renderer.get("temperature_shift", 0.0))
+
+        accent_influence = float(origin_renderer.get("accent_influence", 0.0))
+        if accent_influence > 0 and origin.get("accent"):
+            accent_lab = linear_srgb_to_oklab(
+                srgb_to_linear(hex_to_srgb(normalize_hex(origin["accent"])))
+            )
+            adjusted = adjusted * (1.0 - accent_influence) + accent_lab * accent_influence
+        adjusted[1:3] *= float(origin_renderer.get("chroma_scale", 1.0))
+        adjusted[0] += float(origin_renderer.get("lightness_shift", 0.0))
+        adjusted[2] += float(origin_renderer.get("temperature_shift", 0.0))
+
+        adjusted[0] = np.clip(adjusted[0], 0.2, 0.94)
+        effective_rgb = linear_to_srgb(oklab_to_linear_srgb(adjusted))
+        transformed.append({
+            **item,
+            "base_hex": base_hex,
+            "hex": srgb_to_hex(effective_rgb),
+            "processing_undertone": undertone_hex,
+        })
+    return transformed
+
+
+def protect_color_clarity(
+    canvas_lab: np.ndarray,
+    mix_weights: np.ndarray,
+    palette_lab: np.ndarray,
+) -> np.ndarray:
+    """Restore chroma lost to cross-hue mixing without rotating the resulting hue."""
+    palette_chroma = np.linalg.norm(palette_lab[:, 1:3], axis=1)
+    expected_chroma = np.einsum("nhw,n->hw", mix_weights, palette_chroma, optimize=True)
+    actual_chroma = np.linalg.norm(canvas_lab[..., 1:3], axis=2)
+
+    chroma_floor = np.minimum(expected_chroma * 0.68, 0.16)
+    eligible = (
+        (canvas_lab[..., 0] > 0.25)
+        & (canvas_lab[..., 0] < 0.88)
+        & (expected_chroma > 0.045)
+        & (actual_chroma < chroma_floor)
+    )
+    scale = np.where(
+        eligible,
+        np.minimum(chroma_floor / np.maximum(actual_chroma, 1e-6), 2.2),
+        1.0,
+    )
+    canvas_lab[..., 1:3] *= scale[..., None]
+    collapsed = eligible & (actual_chroma < 1e-4)
+    if np.any(collapsed):
+        dominant_ab = palette_lab[np.argmax(mix_weights, axis=0), 1:3]
+        dominant_norm = np.linalg.norm(dominant_ab, axis=2, keepdims=True)
+        restored_ab = dominant_ab / np.maximum(dominant_norm, 1e-6) * chroma_floor[..., None]
+        canvas_lab[..., 1:3] = np.where(collapsed[..., None], restored_ab, canvas_lab[..., 1:3])
+    return canvas_lab
+
+
 def smooth_noise(rng: np.random.Generator, width: int, height: int, grid_x: int, grid_y: int, blur: float = 0.0) -> np.ndarray:
     small = rng.normal(0.0, 1.0, (grid_y, grid_x)).astype(np.float32)
     low = float(small.min())
@@ -542,6 +751,154 @@ def elliptical_field(
     return np.exp(-np.power(np.maximum(d2, 0), falloff / 2.0) * 1.55)
 
 
+def blur_motif_field(field: np.ndarray, blur_ratio: float) -> np.ndarray:
+    field = field / max(float(field.max()), 1e-6)
+    image = Image.fromarray(np.uint8(np.clip(field, 0.0, 1.0) * 255), mode="L")
+    if blur_ratio > 0:
+        image = image.filter(ImageFilter.GaussianBlur(max(1.0, image.width * blur_ratio)))
+    blurred = np.asarray(image, dtype=np.float32) / 255.0
+    return blurred / max(float(blurred.max()), 1e-6)
+
+
+def build_motif_field(
+    shape: str,
+    X: np.ndarray,
+    Y: np.ndarray,
+    rng: np.random.Generator,
+    scale: float,
+    density: int,
+    anchor_side: int,
+) -> np.ndarray:
+    """Build only oversized, cropped, soft abstract fields—never literal objects."""
+    side = -1 if anchor_side < 0 else 1
+    cx = rng.uniform(-0.03, 0.13) if side < 0 else rng.uniform(0.87, 1.03)
+    cy = rng.uniform(0.18, 0.82)
+    field = np.zeros_like(X, dtype=np.float32)
+
+    if shape == "radial_petals":
+        base_angle = rng.uniform(-math.pi, math.pi)
+        for index in range(max(5, density)):
+            angle = base_angle + index * math.tau / max(5, density)
+            px = cx + math.cos(angle) * scale * 0.2
+            py = cy + math.sin(angle) * scale * 0.16
+            field += elliptical_field(
+                X, Y, px, py, scale * 0.34, scale * 0.11,
+                angle, rng.uniform(1.6, 2.2),
+            )
+    elif shape == "organic_pulp":
+        for index in range(max(2, density)):
+            field += elliptical_field(
+                X, Y,
+                cx + rng.uniform(-0.12, 0.12) * scale,
+                cy + rng.uniform(-0.10, 0.10) * scale,
+                scale * rng.uniform(0.38, 0.56),
+                scale * rng.uniform(0.26, 0.42),
+                rng.uniform(-math.pi, math.pi),
+                rng.uniform(1.4, 2.0),
+            )
+    elif shape == "seed_burst":
+        field += elliptical_field(X, Y, cx, cy, scale * 0.22, scale * 0.18, 0.0, 1.8) * 0.45
+        for _ in range(max(24, density)):
+            angle = rng.uniform(-math.pi, math.pi)
+            radius = scale * np.clip(rng.normal(0.26, 0.12), 0.04, 0.52)
+            px = cx + math.cos(angle) * radius
+            py = cy + math.sin(angle) * radius * 0.82
+            point_scale = scale * rng.uniform(0.018, 0.045)
+            field += elliptical_field(
+                X, Y, px, py, point_scale, point_scale * rng.uniform(0.65, 1.25),
+                angle, rng.uniform(1.5, 2.4),
+            ) * rng.uniform(0.35, 0.9)
+    elif shape == "cluster_blobs":
+        for _ in range(max(5, density)):
+            angle = rng.uniform(-math.pi, math.pi)
+            radius = scale * rng.uniform(0.03, 0.3)
+            blob = scale * rng.uniform(0.12, 0.22)
+            field += elliptical_field(
+                X, Y,
+                cx + math.cos(angle) * radius,
+                cy + math.sin(angle) * radius * 0.8,
+                blob, blob * rng.uniform(0.82, 1.2), angle, 1.9,
+            )
+    elif shape == "translucent_rings":
+        dx = X - cx
+        dy = (Y - cy) / 0.82
+        radius = np.sqrt(dx * dx + dy * dy)
+        for index in range(max(2, density)):
+            ring_radius = scale * (0.2 + index * 0.12)
+            ring_width = scale * rng.uniform(0.025, 0.055)
+            field += np.exp(-((radius - ring_radius) / max(ring_width, 1e-4)) ** 2)
+        angular_fade = 0.58 + 0.42 * np.cos(np.arctan2(dy, dx) - rng.uniform(-math.pi, math.pi))
+        field *= np.clip(angular_fade, 0.0, 1.0)
+    elif shape in {"mist_ribbon", "viscous_flow"}:
+        ribbon_count = max(2, density)
+        for index in range(ribbon_count):
+            phase = rng.uniform(-math.pi, math.pi)
+            frequency = rng.uniform(2.0, 4.2) if shape == "mist_ribbon" else rng.uniform(1.2, 2.4)
+            amplitude = scale * (0.08 if shape == "mist_ribbon" else 0.13)
+            centerline = cy + (index - (ribbon_count - 1) / 2) * scale * 0.1
+            centerline += amplitude * np.sin(X * frequency * math.pi + phase)
+            width = scale * (0.045 if shape == "mist_ribbon" else 0.085)
+            x_fade = np.exp(-((X - cx) / max(scale * 0.82, 1e-4)) ** 2)
+            field += np.exp(-((Y - centerline) / max(width, 1e-4)) ** 2) * x_fade
+    elif shape == "liquid_bloom":
+        base_angle = rng.uniform(-math.pi, math.pi)
+        for index in range(max(4, density)):
+            angle = base_angle + index * 1.35
+            radius = scale * (0.05 + 0.055 * index)
+            field += elliptical_field(
+                X, Y,
+                cx + math.cos(angle) * radius,
+                cy + math.sin(angle) * radius * 0.8,
+                scale * rng.uniform(0.16, 0.3),
+                scale * rng.uniform(0.1, 0.22),
+                angle + 0.6, rng.uniform(1.5, 2.2),
+            )
+    else:
+        field = elliptical_field(X, Y, cx, cy, scale * 0.5, scale * 0.36, 0.0, 1.8)
+
+    return field
+
+
+def apply_flavor_motifs(
+    canvas_lab: np.ndarray,
+    X: np.ndarray,
+    Y: np.ndarray,
+    palette_lab: np.ndarray,
+    selected_motifs: list[dict[str, Any]],
+    processing_renderer: dict[str, Any],
+    rng: np.random.Generator,
+) -> np.ndarray:
+    motif_strength = float(np.clip(
+        0.8 + 0.28 * float(processing_renderer.get("contrast_scale", 1.0)),
+        0.82,
+        1.2,
+    ))
+    main_side = -1 if rng.random() < 0.5 else 1
+    for motif in selected_motifs:
+        params = motif.get("renderer", {})
+        field = build_motif_field(
+            motif["shape"], X, Y, rng,
+            float(params.get("scale", 0.7)),
+            int(params.get("density", 5)),
+            main_side if motif["role"] == "main" else -main_side,
+        )
+        field = blur_motif_field(field, float(params.get("blur", 0.04)))
+        role_scale = 1.0 if motif["role"] == "main" else 0.86
+        alpha = np.clip(
+            field * float(params.get("opacity", 0.12)) * role_scale * motif_strength,
+            0.0,
+            0.38,
+        )[..., None]
+        motif_color = palette_lab[int(motif["flavor_index"])].copy()
+        motif_color[0] = np.clip(
+            motif_color[0] + float(params.get("lightness_shift", 0.0)),
+            0.18,
+            0.96,
+        )
+        canvas_lab = canvas_lab * (1.0 - alpha) + motif_color * alpha
+    return canvas_lab
+
+
 def render(
     palette: list[dict[str, Any]],
     weights: np.ndarray,
@@ -549,6 +906,8 @@ def render(
     height: int,
     composition_seed: int,
     grain_strength: float,
+    processing_renderer: dict[str, Any],
+    selected_motifs: list[dict[str, Any]],
 ) -> Image.Image:
     if width * 4 != height * 3:
         raise ValueError("输出尺寸必须严格保持 3:4 比例")
@@ -564,7 +923,12 @@ def render(
     X, Y = np.meshgrid(x, y)
 
     curl_x, curl_y, luminance_noise = make_warp(rng, work_width, work_height)
-    warp_amount = rng.uniform(0.035, 0.085)
+    warp_scale = float(processing_renderer.get("warp_scale", 1.0))
+    diffusion_scale = float(processing_renderer.get("diffusion_scale", 1.0))
+    contrast_scale = float(processing_renderer.get("contrast_scale", 1.0))
+    grain_scale = float(processing_renderer.get("grain_scale", 1.0))
+    texture_mode = str(processing_renderer.get("texture_mode", "matte_grain"))
+    warp_amount = rng.uniform(0.035, 0.085) * warp_scale
     Xw = X + curl_x * warp_amount
     Yw = Y + curl_y * warp_amount * 0.82
 
@@ -592,8 +956,8 @@ def render(
                 cx, cy = rng.uniform(0.02, 0.98), rng.uniform(0.02, 0.98)
 
             area_scale = 0.70 + 0.55 * relative
-            rx = rng.uniform(0.32, 0.72) * area_scale
-            ry = rng.uniform(0.22, 0.58) * area_scale
+            rx = rng.uniform(0.32, 0.72) * area_scale * diffusion_scale
+            ry = rng.uniform(0.22, 0.58) * area_scale * diffusion_scale
             angle = rng.uniform(-math.pi, math.pi)
             falloff = rng.uniform(1.45, 2.45)
             strength = rng.uniform(0.65, 1.15) * (1.0 if blob_index == 0 else 0.58)
@@ -609,7 +973,7 @@ def render(
     stack = np.stack(fields, axis=0)
     # 使用柔和的区域胜出模型：颜色保持扩散，但不会平均成米色或灰色。
     order_bias = np.power(weights / weights.max(), 0.52).astype(np.float32)
-    regional_contrast = rng.uniform(1.65, 2.25)
+    regional_contrast = np.clip(rng.uniform(1.65, 2.25) * contrast_scale, 1.2, 3.0)
     # 校准全局色域偏置，使平均视觉覆盖率符合请求的顺序权重。
     calibrated_bias = order_bias.copy()
     for _ in range(10):
@@ -659,8 +1023,16 @@ def render(
     anchor_alpha = rng.uniform(0.05, 0.17) * anchor_field[..., None]
     canvas_lab = canvas_lab * (1.0 - anchor_alpha) + anchor_color * anchor_alpha
 
+    # 只叠加一个主母题和一个互补辅助母题；形态保持超大、裁切、柔边与半透明。
+    canvas_lab = apply_flavor_motifs(
+        canvas_lab, Xw, Yw, oklab_colors, selected_motifs, processing_renderer, rng
+    )
+
     # 使用低频明度调制增强氛围纵深。
     canvas_lab[..., 0] += np.clip(luminance_noise, -2.0, 2.0) * rng.uniform(0.004, 0.014)
+
+    # 防止跨色相混合后色度塌陷成灰褐色，同时保持混合后的色相与深色锚点。
+    canvas_lab = protect_color_clarity(canvas_lab, mix_weights, oklab_colors)
 
     linear_rgb = oklab_to_linear_srgb(canvas_lab)
     srgb = np.clip(linear_to_srgb(linear_rgb), 0.0, 1.0)
@@ -672,11 +1044,40 @@ def render(
     grain_rng = np.random.default_rng(composition_seed ^ 0xA5A5A5A5)
     mono = grain_rng.normal(0.0, 1.0, (height, width, 1)).astype(np.float32)
     colored = grain_rng.normal(0.0, 1.0, (height, width, 3)).astype(np.float32)
-    texture = mono * grain_strength * 0.70 + colored * grain_strength * 0.16
+    effective_grain = grain_strength * grain_scale
+    texture = mono * effective_grain * 0.70 + colored * effective_grain * 0.16
     # 中间调颗粒稍强，高光和深阴影区域更安静。
     luma = full.mean(axis=2, keepdims=True)
     midtone_mask = 0.60 + 0.40 * (1.0 - np.abs(luma - 0.5) * 1.5)
     full = np.clip(full + texture * midtone_mask, 0.0, 1.0)
+
+    if texture_mode == "glass_diffusion":
+        diffused = np.asarray(
+            Image.fromarray(np.uint8(full * 255.0), mode="RGB").filter(
+                ImageFilter.GaussianBlur(max(1.0, width * 0.0024))
+            ),
+            dtype=np.float32,
+        ) / 255.0
+        full = np.clip(full * 0.72 + diffused * 0.28 + 0.008, 0.0, 1.0)
+    elif texture_mode == "liquid_glow":
+        blurred = np.asarray(
+            Image.fromarray(np.uint8(full * 255.0), mode="RGB").filter(
+                ImageFilter.GaussianBlur(max(2.0, width * 0.012))
+            ),
+            dtype=np.float32,
+        ) / 255.0
+        glow = np.maximum(blurred - 0.48, 0.0) * 0.12
+        full = np.clip(full + glow, 0.0, 1.0)
+    elif texture_mode == "spray_particle":
+        particle_mask = grain_rng.random((height, width)) < 0.0015
+        if np.any(particle_mask):
+            particle_palette = np.stack([hex_to_srgb(item["hex"]) for item in palette])
+            particle_indexes = grain_rng.integers(0, len(particle_palette), size=int(particle_mask.sum()))
+            particle_alpha = grain_rng.uniform(0.18, 0.42, size=(int(particle_mask.sum()), 1))
+            full[particle_mask] = (
+                full[particle_mask] * (1.0 - particle_alpha)
+                + particle_palette[particle_indexes] * particle_alpha
+            )
     return Image.fromarray(np.uint8(full * 255.0), mode="RGB")
 
 
@@ -693,7 +1094,25 @@ def main() -> int:
         if args.colors:
             overrides = [normalize_hex(item) for item in args.colors.replace("，", ",").split(",") if item.strip()]
         data = load_palette()
-        palette = resolve_palette(flavors, data, overrides)
+        processing_data = load_json(PROCESSING_PATH)
+        origin_data = load_json(ORIGIN_PATH)
+        motif_data = load_json(MOTIF_PATH)
+        processing_key, processing, processing_source = detect_profile(
+            args.processing_method,
+            args.coffee_name,
+            processing_data["processing_system"],
+            processing_data.get("fallback", "neutral"),
+            processing_data.get("detection_order"),
+        )
+        origin_key, origin, origin_source = detect_profile(
+            args.origin,
+            args.coffee_name,
+            origin_data["origin_adjustments"],
+            origin_data.get("fallback", "neutral"),
+        )
+        base_palette = resolve_palette(flavors, data, overrides)
+        selected_motifs = select_flavor_motifs(flavors, base_palette, motif_data)
+        palette = apply_chromatic_system(base_palette, processing, origin)
         weights = compute_weights(len(flavors), args.decay)
         composition_seed = args.seed if args.seed is not None else secrets.randbits(32)
         coffee_font_path = resolve_required_font(args.language, "coffee", args.coffee_font)
@@ -711,6 +1130,8 @@ def main() -> int:
             height=args.height,
             composition_seed=composition_seed,
             grain_strength=float(np.clip(args.grain, 0.0, 0.08)),
+            processing_renderer=processing.get("renderer", {}),
+            selected_motifs=selected_motifs,
         )
         typography = add_typography(
             image,
@@ -723,14 +1144,50 @@ def main() -> int:
         image.save(output, format="PNG", optimize=args.optimize_png)
 
         palette_key_text = "|".join(item["normalized"] for item in palette)
+        palette_key_text += f"|processing:{processing_key}|origin:{origin_key}"
         metadata = {
-            "version": "0.4.1",
+            "version": "2.1.0",
+            "system_name": processing_data.get("system_name", "Coffee Visual Identity System 2.1"),
             "palette_version": data.get("paletteVersion", "unknown"),
             "dimensions": {"width": args.width, "height": args.height, "ratio": "3:4"},
             "palette_key": hashlib.sha256(palette_key_text.encode("utf-8")).hexdigest()[:16],
             "composition_seed": composition_seed,
             "weight_decay": args.decay,
             "grain": args.grain,
+            "chromatic_layers": {
+                "priority": processing_data.get("priority", {
+                    "processing_method": 0.6,
+                    "flavor_notes": 0.3,
+                    "origin": 0.1,
+                }),
+                "processing": {
+                    "key": processing_key,
+                    "source": processing_source,
+                    "visual_identity": processing.get("visual_identity", {}),
+                    "palette": processing.get("palette", []),
+                    "texture": processing.get("texture", {}),
+                    "renderer": processing.get("renderer", {}),
+                },
+                "origin": {
+                    "key": origin_key,
+                    "source": origin_source,
+                    "identity": origin.get("identity"),
+                    "accent": origin.get("accent"),
+                    "renderer": origin.get("renderer", {}),
+                },
+                "flavor_motifs": {
+                    "system_version": motif_data.get("version", "unknown"),
+                    "selection_rules": motif_data.get("selection", {}),
+                    "global_rules": motif_data.get("global_rules", {}),
+                    "selected": selected_motifs,
+                },
+            },
+            "color_cleaning": {
+                "enabled": True,
+                "minimum_chroma_ratio": 0.68,
+                "minimum_source_chroma": 0.045,
+                "maximum_target_chroma": 0.16,
+            },
             "typography": typography,
             "flavors": [
                 {**item, "weight": round(float(weights[i]), 6)}
@@ -741,7 +1198,13 @@ def main() -> int:
         metadata_path = output.with_suffix(".json")
         metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
 
-        print(json.dumps({"png": str(output), "metadata": str(metadata_path), "seed": composition_seed}, ensure_ascii=False))
+        print(json.dumps({
+            "png": str(output),
+            "metadata": str(metadata_path),
+            "seed": composition_seed,
+            "processing_method": processing_key,
+            "origin": origin_key,
+        }, ensure_ascii=False))
         return 0
     except Exception as exc:  # noqa: BLE001
         print(f"错误：{exc}", file=sys.stderr)

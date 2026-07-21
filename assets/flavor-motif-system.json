@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "system_name": "Abstract Flavor Motif System",
+  "selection": {
+    "maximum_motifs": 2,
+    "main_count": 1,
+    "auxiliary_count": 1,
+    "priority": "flavor_input_order",
+    "prefer_complementary_auxiliary": true
+  },
+  "global_rules": {
+    "required": [
+      "large scale",
+      "partial crop",
+      "soft edge",
+      "semi-transparent",
+      "blurred integration",
+      "abstract expression"
+    ],
+    "forbidden": [
+      "real fruit",
+      "real flower",
+      "food illustration",
+      "complete object",
+      "icon",
+      "sticker",
+      "cartoon",
+      "hard outline"
+    ]
+  },
+  "family_fallbacks": {
+    "floral": "jasmine",
+    "citrus": "lemon",
+    "berry": "blueberry",
+    "orchard_stone": "peach",
+    "tropical_melon": "passion_fruit",
+    "sweet_bakery": "honey",
+    "tea_herbal": "tea",
+    "boozy_fermented": "fermentation"
+  },
+  "motifs": {
+    "jasmine": {
+      "aliases": ["jasmine", "茉莉", "茉莉花", "white floral", "白花"],
+      "source_metaphor": ["petal", "floral shadow", "white halo"],
+      "shape": "radial_petals",
+      "visual_family": "airborne",
+      "preferred_auxiliary_shapes": ["seed_burst", "translucent_rings", "cluster_blobs"],
+      "renderer": {"scale": 0.7, "opacity": 0.3, "blur": 0.04, "lightness_shift": 0.24, "density": 7}
+    },
+    "peach": {
+      "aliases": ["peach", "桃子", "桃", "水蜜桃", "白桃", "黄桃"],
+      "source_metaphor": ["flesh", "rounded organic volume", "pink-orange diffusion"],
+      "shape": "organic_pulp",
+      "visual_family": "soft_mass",
+      "preferred_auxiliary_shapes": ["seed_burst", "mist_ribbon", "translucent_rings"],
+      "renderer": {"scale": 0.82, "opacity": 0.24, "blur": 0.052, "lightness_shift": 0.12, "density": 3}
+    },
+    "passion_fruit": {
+      "aliases": ["passion fruit", "passionfruit", "百香果", "热情果"],
+      "source_metaphor": ["seed structure", "radial burst", "organic particle core"],
+      "shape": "seed_burst",
+      "visual_family": "particle",
+      "preferred_auxiliary_shapes": ["radial_petals", "organic_pulp", "mist_ribbon"],
+      "renderer": {"scale": 0.55, "opacity": 0.32, "blur": 0.009, "lightness_shift": -0.24, "density": 42}
+    },
+    "blueberry": {
+      "aliases": ["blueberry", "blueberries", "蓝莓"],
+      "source_metaphor": ["berry cluster", "blue-violet diffusion"],
+      "shape": "cluster_blobs",
+      "visual_family": "cluster",
+      "preferred_auxiliary_shapes": ["radial_petals", "translucent_rings", "mist_ribbon"],
+      "renderer": {"scale": 0.62, "opacity": 0.25, "blur": 0.032, "lightness_shift": -0.12, "density": 7}
+    },
+    "lemon": {
+      "aliases": ["lemon", "柠檬", "黄柠檬", "citrus", "柑橘"],
+      "source_metaphor": ["citrus arc", "transparent ring", "yellow geometric curve"],
+      "shape": "translucent_rings",
+      "visual_family": "geometry",
+      "preferred_auxiliary_shapes": ["radial_petals", "seed_burst", "mist_ribbon"],
+      "renderer": {"scale": 0.72, "opacity": 0.25, "blur": 0.02, "lightness_shift": 0.2, "density": 3}
+    },
+    "tea": {
+      "aliases": ["tea", "black tea", "oolong", "tea-like", "茶", "红茶", "乌龙茶", "茶感"],
+      "source_metaphor": ["tea mist", "water flow", "transparent vapor"],
+      "shape": "mist_ribbon",
+      "visual_family": "flow",
+      "preferred_auxiliary_shapes": ["radial_petals", "translucent_rings", "cluster_blobs"],
+      "renderer": {"scale": 0.9, "opacity": 0.2, "blur": 0.052, "lightness_shift": 0.12, "density": 3}
+    },
+    "honey": {
+      "aliases": ["honey", "蜂蜜", "蜜糖"],
+      "source_metaphor": ["viscous flow", "golden highlight", "liquid transition"],
+      "shape": "viscous_flow",
+      "visual_family": "flow",
+      "preferred_auxiliary_shapes": ["radial_petals", "seed_burst", "cluster_blobs"],
+      "renderer": {"scale": 0.86, "opacity": 0.21, "blur": 0.045, "lightness_shift": 0.15, "density": 2}
+    },
+    "fermentation": {
+      "aliases": ["wine", "fermentation", "fermented", "boozy", "酒香", "发酵", "葡萄酒", "酒感"],
+      "source_metaphor": ["liquid fermentation", "organic bloom", "vapor diffusion", "dark halo"],
+      "shape": "liquid_bloom",
+      "visual_family": "energy",
+      "preferred_auxiliary_shapes": ["seed_burst", "radial_petals", "organic_pulp"],
+      "renderer": {"scale": 0.68, "opacity": 0.25, "blur": 0.034, "lightness_shift": -0.16, "density": 5}
+    }
+  }
+}
