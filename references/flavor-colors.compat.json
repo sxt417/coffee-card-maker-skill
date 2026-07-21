@@ -1,0 +1,2780 @@
+{
+  "茉莉": {
+    "hex": "#F3E8C8",
+    "primary": "#F3E8C8",
+    "light": "#F9F6F0",
+    "dark": "#C29D32",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Jasmine",
+    "aliases": [
+      "茉莉花",
+      "jasmine flower",
+      "white jasmine"
+    ],
+    "basis": "象牙白至淡奶黄色茉莉花瓣"
+  },
+  "玫瑰": {
+    "hex": "#D84A78",
+    "primary": "#D84A78",
+    "light": "#EACED7",
+    "dark": "#7F203F",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Rose",
+    "aliases": [
+      "玫瑰花",
+      "rose petal",
+      "rose floral"
+    ],
+    "basis": "典型玫红色玫瑰花瓣"
+  },
+  "橙花": {
+    "hex": "#F5E5D2",
+    "primary": "#F5E5D2",
+    "light": "#FAF6F3",
+    "dark": "#C68334",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Orange Blossom",
+    "aliases": [
+      "橘花",
+      "柑橘花",
+      "orange flower",
+      "neroli blossom"
+    ],
+    "basis": "橙花的奶白色花瓣"
+  },
+  "薰衣草": {
+    "hex": "#9A86C8",
+    "primary": "#9A86C8",
+    "light": "#E0DCE9",
+    "dark": "#4F3C7C",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Lavender",
+    "aliases": [
+      "熏衣草",
+      "lavender floral"
+    ],
+    "basis": "薰衣草花穗的灰紫色"
+  },
+  "紫罗兰": {
+    "hex": "#7052A3",
+    "primary": "#7052A3",
+    "light": "#D2CCDD",
+    "dark": "#3E2F58",
+    "textColor": "#FFFFFF",
+    "family": "floral",
+    "category": "花香",
+    "english": "Violet",
+    "aliases": [
+      "violet flower",
+      "紫花香"
+    ],
+    "basis": "紫罗兰花瓣的深紫色"
+  },
+  "接骨木花": {
+    "hex": "#E9E6D2",
+    "primary": "#E9E6D2",
+    "light": "#F7F6F2",
+    "dark": "#A09653",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Elderflower",
+    "aliases": [
+      "elder flower",
+      "接骨木",
+      "elder blossom"
+    ],
+    "basis": "接骨木花簇的柔和米白色"
+  },
+  "洋甘菊": {
+    "hex": "#E8C94F",
+    "primary": "#E8C94F",
+    "light": "#EEE8D0",
+    "dark": "#927A19",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Chamomile",
+    "aliases": [
+      "甘菊",
+      "chamomile flower",
+      "洋甘菊花"
+    ],
+    "basis": "洋甘菊黄色花心的代表色"
+  },
+  "桂花": {
+    "hex": "#E6A62F",
+    "primary": "#E6A62F",
+    "light": "#ECDFC8",
+    "dark": "#835D15",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Osmanthus",
+    "aliases": [
+      "金桂",
+      "osmanthus flower",
+      "sweet osmanthus"
+    ],
+    "basis": "桂花小花的金橙色"
+  },
+  "栀子花": {
+    "hex": "#F2EED9",
+    "primary": "#F2EED9",
+    "light": "#F9F9F4",
+    "dark": "#B7A545",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Gardenia",
+    "aliases": [
+      "栀子",
+      "gardenia flower"
+    ],
+    "basis": "栀子花的乳白色"
+  },
+  "忍冬花": {
+    "hex": "#F0D381",
+    "primary": "#F0D381",
+    "light": "#F3EEDD",
+    "dark": "#AF891C",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Honeysuckle",
+    "aliases": [
+      "金银花",
+      "honeysuckle flower"
+    ],
+    "basis": "忍冬花偏柔黄的花冠色"
+  },
+  "木兰花": {
+    "hex": "#F4E7E3",
+    "primary": "#F4E7E3",
+    "light": "#FAF8F7",
+    "dark": "#B4674F",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Magnolia",
+    "aliases": [
+      "玉兰花",
+      "玉兰",
+      "magnolia flower"
+    ],
+    "basis": "木兰花瓣的淡粉白色"
+  },
+  "兰花": {
+    "hex": "#B56AA0",
+    "primary": "#B56AA0",
+    "light": "#E3D4DF",
+    "dark": "#67375A",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Orchid",
+    "aliases": [
+      "orchid flower",
+      "兰花香"
+    ],
+    "basis": "紫粉色兰花花瓣"
+  },
+  "百合": {
+    "hex": "#F5F1DD",
+    "primary": "#F5F1DD",
+    "light": "#FAFAF6",
+    "dark": "#C0AB40",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Lily",
+    "aliases": [
+      "百合花",
+      "lily flower"
+    ],
+    "basis": "百合花瓣的暖白色"
+  },
+  "牡丹": {
+    "hex": "#E68AA5",
+    "primary": "#E68AA5",
+    "light": "#F1DFE5",
+    "dark": "#A2294C",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Peony",
+    "aliases": [
+      "牡丹花",
+      "peony flower"
+    ],
+    "basis": "牡丹花瓣的柔粉红色"
+  },
+  "菊花": {
+    "hex": "#E6B83A",
+    "primary": "#E6B83A",
+    "light": "#EDE3CA",
+    "dark": "#886917",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Chrysanthemum",
+    "aliases": [
+      "黄菊",
+      "chrysanthemum flower"
+    ],
+    "basis": "黄色菊花的金黄色"
+  },
+  "咖啡花": {
+    "hex": "#F6F1E6",
+    "primary": "#F6F1E6",
+    "light": "#FBFAF8",
+    "dark": "#B9974D",
+    "textColor": "#111111",
+    "family": "floral",
+    "category": "花香",
+    "english": "Coffee Blossom",
+    "aliases": [
+      "咖啡树花",
+      "coffee flower",
+      "coffee blossom floral"
+    ],
+    "basis": "咖啡树白色花瓣"
+  },
+  "柠檬": {
+    "hex": "#F2D63C",
+    "primary": "#F2D63C",
+    "light": "#F0EACC",
+    "dark": "#968110",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Lemon",
+    "aliases": [
+      "黄柠檬",
+      "lemon fruit",
+      "lemony"
+    ],
+    "basis": "成熟柠檬表皮的鲜黄色"
+  },
+  "柠檬皮": {
+    "hex": "#E9C62C",
+    "primary": "#E9C62C",
+    "light": "#ECE6C7",
+    "dark": "#857013",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Lemon Peel",
+    "aliases": [
+      "柠檬 zest",
+      "lemon zest",
+      "lemon rind"
+    ],
+    "basis": "柠檬外皮较深的黄色"
+  },
+  "青柠": {
+    "hex": "#8DC63F",
+    "primary": "#8DC63F",
+    "light": "#D9E5CA",
+    "dark": "#4D6C24",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Lime",
+    "aliases": [
+      "莱姆",
+      "lime fruit",
+      "green lime"
+    ],
+    "basis": "青柠表皮的鲜黄绿色"
+  },
+  "葡萄柚": {
+    "hex": "#F0A39D",
+    "primary": "#F0A39D",
+    "light": "#F5E6E5",
+    "dark": "#B72E23",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Grapefruit",
+    "aliases": [
+      "西柚",
+      "grapefruit fruit"
+    ],
+    "basis": "浅粉橙色葡萄柚果肉"
+  },
+  "粉红葡萄柚": {
+    "hex": "#EF7D88",
+    "primary": "#EF7D88",
+    "light": "#F3DCDF",
+    "dark": "#AC1C2A",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Pink Grapefruit",
+    "aliases": [
+      "粉红西柚",
+      "pink grapefruit flesh",
+      "ruby grapefruit"
+    ],
+    "basis": "粉红葡萄柚果肉的珊瑚粉色"
+  },
+  "橙子": {
+    "hex": "#F39A2E",
+    "primary": "#F39A2E",
+    "light": "#EFDEC8",
+    "dark": "#91560E",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Orange",
+    "aliases": [
+      "甜橙",
+      "orange fruit",
+      "navel orange"
+    ],
+    "basis": "成熟甜橙表皮的橙色"
+  },
+  "血橙": {
+    "hex": "#D94A32",
+    "primary": "#D94A32",
+    "light": "#E9CCC8",
+    "dark": "#78281B",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Blood Orange",
+    "aliases": [
+      "红橙",
+      "blood orange fruit"
+    ],
+    "basis": "血橙深红橙色果肉"
+  },
+  "橘子": {
+    "hex": "#F47F32",
+    "primary": "#F47F32",
+    "light": "#F0D8C9",
+    "dark": "#94430E",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Mandarin",
+    "aliases": [
+      "蜜橘",
+      "柑橘",
+      "mandarin orange",
+      "tangerine"
+    ],
+    "basis": "橘子表皮偏红的橙色"
+  },
+  "佛手柑": {
+    "hex": "#B7C94B",
+    "primary": "#B7C94B",
+    "light": "#E2E6CD",
+    "dark": "#677126",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Bergamot",
+    "aliases": [
+      "香柠檬",
+      "bergamot orange",
+      "bergamot citrus"
+    ],
+    "basis": "佛手柑黄绿色果皮"
+  },
+  "柚子": {
+    "hex": "#EBD84C",
+    "primary": "#EBD84C",
+    "light": "#EFEBCF",
+    "dark": "#948517",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Yuzu",
+    "aliases": [
+      "香橙柚",
+      "日本柚子",
+      "yuzu citrus"
+    ],
+    "basis": "柚子表皮的明亮黄色"
+  },
+  "文旦": {
+    "hex": "#D7E78C",
+    "primary": "#D7E78C",
+    "light": "#EFF2E0",
+    "dark": "#8EA329",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Pomelo",
+    "aliases": [
+      "柚子果肉",
+      "蜜柚",
+      "pomelo fruit"
+    ],
+    "basis": "文旦浅黄绿色果肉"
+  },
+  "金桔": {
+    "hex": "#EEA52F",
+    "primary": "#EEA52F",
+    "light": "#EEDFC8",
+    "dark": "#8C5D11",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Kumquat",
+    "aliases": [
+      "金橘",
+      "kumquat fruit"
+    ],
+    "basis": "金桔表皮的金橙色"
+  },
+  "香橼": {
+    "hex": "#D9C84F",
+    "primary": "#D9C84F",
+    "light": "#EAE7CF",
+    "dark": "#827621",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Citron",
+    "aliases": [
+      "枸橼",
+      "citron fruit"
+    ],
+    "basis": "香橼表皮的黄绿色"
+  },
+  "橙皮": {
+    "hex": "#D97924",
+    "primary": "#D97924",
+    "light": "#E8D5C4",
+    "dark": "#734318",
+    "textColor": "#111111",
+    "family": "citrus",
+    "category": "柑橘",
+    "english": "Orange Peel",
+    "aliases": [
+      "橘皮",
+      "orange zest",
+      "orange rind"
+    ],
+    "basis": "干燥或新鲜橙皮的深橙色"
+  },
+  "草莓": {
+    "hex": "#E54858",
+    "primary": "#E54858",
+    "light": "#EDCED1",
+    "dark": "#8C1A25",
+    "textColor": "#111111",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Strawberry",
+    "aliases": [
+      "strawberry fruit",
+      "鲜草莓"
+    ],
+    "basis": "成熟草莓果肉与表皮的红色"
+  },
+  "树莓": {
+    "hex": "#D83B6A",
+    "primary": "#D83B6A",
+    "light": "#E9CAD3",
+    "dark": "#7A1D39",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Raspberry",
+    "aliases": [
+      "覆盆子",
+      "raspberry fruit",
+      "红树莓"
+    ],
+    "basis": "树莓的明亮莓红色"
+  },
+  "蔓越莓": {
+    "hex": "#A9244F",
+    "primary": "#A9244F",
+    "light": "#E2BBC7",
+    "dark": "#5A172C",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Cranberry",
+    "aliases": [
+      "cranberry fruit",
+      "小红莓"
+    ],
+    "basis": "蔓越莓的深红紫色"
+  },
+  "蓝莓": {
+    "hex": "#4B4A91",
+    "primary": "#4B4A91",
+    "light": "#C7C7DA",
+    "dark": "#2B2A4E",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Blueberry",
+    "aliases": [
+      "blueberry fruit",
+      "蓝莓果"
+    ],
+    "basis": "蓝莓果皮的蓝紫色"
+  },
+  "黑莓": {
+    "hex": "#3C2448",
+    "primary": "#3C2448",
+    "light": "#C3B1CC",
+    "dark": "#211527",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Blackberry",
+    "aliases": [
+      "blackberry fruit",
+      "黑树莓"
+    ],
+    "basis": "黑莓表皮的深紫黑色"
+  },
+  "红樱桃": {
+    "hex": "#B81F37",
+    "primary": "#B81F37",
+    "light": "#E5BBC2",
+    "dark": "#621421",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Red Cherry",
+    "aliases": [
+      "樱桃",
+      "甜樱桃",
+      "red cherry fruit"
+    ],
+    "basis": "红樱桃表皮的鲜深红色"
+  },
+  "黑樱桃": {
+    "hex": "#5E1D2F",
+    "primary": "#5E1D2F",
+    "light": "#D5ADB8",
+    "dark": "#32111A",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Black Cherry",
+    "aliases": [
+      "暗樱桃",
+      "black cherry fruit"
+    ],
+    "basis": "黑樱桃表皮的酒红色"
+  },
+  "红加仑": {
+    "hex": "#C93542",
+    "primary": "#C93542",
+    "light": "#E5C7CA",
+    "dark": "#6B2027",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Red Currant",
+    "aliases": [
+      "红醋栗",
+      "redcurrant",
+      "red currant fruit"
+    ],
+    "basis": "红加仑半透明的亮红色"
+  },
+  "黑加仑": {
+    "hex": "#472344",
+    "primary": "#472344",
+    "light": "#CCB1CA",
+    "dark": "#261425",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Black Currant",
+    "aliases": [
+      "黑醋栗",
+      "blackcurrant",
+      "cassis"
+    ],
+    "basis": "黑加仑果皮的黑紫色"
+  },
+  "桑葚": {
+    "hex": "#642A5F",
+    "primary": "#642A5F",
+    "light": "#D3B5D0",
+    "dark": "#361833",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Mulberry",
+    "aliases": [
+      "桑果",
+      "mulberry fruit"
+    ],
+    "basis": "熟桑葚的浓紫红色"
+  },
+  "醋栗": {
+    "hex": "#A8B94B",
+    "primary": "#A8B94B",
+    "light": "#DFE2CC",
+    "dark": "#5B642B",
+    "textColor": "#111111",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Gooseberry",
+    "aliases": [
+      "鹅莓",
+      "gooseberry fruit",
+      "green gooseberry"
+    ],
+    "basis": "绿色醋栗的黄绿色"
+  },
+  "接骨木莓": {
+    "hex": "#332A4F",
+    "primary": "#332A4F",
+    "light": "#BBB5CD",
+    "dark": "#1C182B",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Elderberry",
+    "aliases": [
+      "接骨木果",
+      "elder berry",
+      "elderberry fruit"
+    ],
+    "basis": "接骨木莓的深蓝紫色"
+  },
+  "波森莓": {
+    "hex": "#6E2D57",
+    "primary": "#6E2D57",
+    "light": "#D5B7CB",
+    "dark": "#3B1A2F",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Boysenberry",
+    "aliases": [
+      "boysen berry",
+      "boysenberry fruit"
+    ],
+    "basis": "波森莓的深莓紫色"
+  },
+  "越橘": {
+    "hex": "#B52F43",
+    "primary": "#B52F43",
+    "light": "#E2C1C6",
+    "dark": "#611D27",
+    "textColor": "#FFFFFF",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Lingonberry",
+    "aliases": [
+      "红莓苔子",
+      "lingonberry fruit"
+    ],
+    "basis": "越橘的冷调深红色"
+  },
+  "云莓": {
+    "hex": "#E6A64B",
+    "primary": "#E6A64B",
+    "light": "#EEE1CF",
+    "dark": "#8E5E1A",
+    "textColor": "#111111",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Cloudberry",
+    "aliases": [
+      "cloud berry",
+      "cloudberry fruit"
+    ],
+    "basis": "成熟云莓的金橙色"
+  },
+  "枸杞": {
+    "hex": "#D64B2D",
+    "primary": "#D64B2D",
+    "light": "#E8CCC6",
+    "dark": "#732B1B",
+    "textColor": "#111111",
+    "family": "berry",
+    "category": "莓果",
+    "english": "Goji Berry",
+    "aliases": [
+      "枸杞子",
+      "goji",
+      "wolfberry"
+    ],
+    "basis": "枸杞果实的红橙色"
+  },
+  "青苹果": {
+    "hex": "#8CBF3F",
+    "primary": "#8CBF3F",
+    "light": "#D9E3C9",
+    "dark": "#4C6625",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Green Apple",
+    "aliases": [
+      "绿苹果",
+      "green apple fruit",
+      "granny smith"
+    ],
+    "basis": "青苹果表皮的鲜绿色"
+  },
+  "红苹果": {
+    "hex": "#C9363E",
+    "primary": "#C9363E",
+    "light": "#E5C8C9",
+    "dark": "#6B2125",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Red Apple",
+    "aliases": [
+      "red apple fruit",
+      "红富士"
+    ],
+    "basis": "红苹果表皮的标准红色"
+  },
+  "黄苹果": {
+    "hex": "#D8B735",
+    "primary": "#D8B735",
+    "light": "#E9E2C8",
+    "dark": "#78651C",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Yellow Apple",
+    "aliases": [
+      "金苹果",
+      "yellow apple fruit",
+      "golden delicious"
+    ],
+    "basis": "黄苹果表皮的金黄色"
+  },
+  "梨": {
+    "hex": "#C4D66A",
+    "primary": "#C4D66A",
+    "light": "#E8EBD6",
+    "dark": "#77862A",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Pear",
+    "aliases": [
+      "西洋梨",
+      "pear fruit"
+    ],
+    "basis": "梨表皮的浅黄绿色"
+  },
+  "亚洲梨": {
+    "hex": "#D2C786",
+    "primary": "#D2C786",
+    "light": "#ECEADD",
+    "dark": "#867B37",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Asian Pear",
+    "aliases": [
+      "雪梨",
+      "水梨",
+      "nashi pear",
+      "asian pear fruit"
+    ],
+    "basis": "亚洲梨表皮的浅土黄色"
+  },
+  "白桃": {
+    "hex": "#F3CFC4",
+    "primary": "#F3CFC4",
+    "light": "#F8F1EF",
+    "dark": "#C2522F",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "White Peach",
+    "aliases": [
+      "水蜜桃",
+      "white peach fruit"
+    ],
+    "basis": "白桃果肉的淡粉奶色"
+  },
+  "黄桃": {
+    "hex": "#F0AD5D",
+    "primary": "#F0AD5D",
+    "light": "#F1E4D4",
+    "dark": "#A26216",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Yellow Peach",
+    "aliases": [
+      "yellow peach fruit",
+      "黄金桃"
+    ],
+    "basis": "黄桃果肉的暖黄色"
+  },
+  "油桃": {
+    "hex": "#E46F55",
+    "primary": "#E46F55",
+    "light": "#EED6D1",
+    "dark": "#90311D",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Nectarine",
+    "aliases": [
+      "nectarine fruit",
+      "油桃果"
+    ],
+    "basis": "油桃表皮的橙红色"
+  },
+  "杏子": {
+    "hex": "#E89B50",
+    "primary": "#E89B50",
+    "light": "#EEDFD0",
+    "dark": "#925519",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Apricot",
+    "aliases": [
+      "杏",
+      "apricot fruit"
+    ],
+    "basis": "成熟杏子的橙黄色"
+  },
+  "李子": {
+    "hex": "#7B4A78",
+    "primary": "#7B4A78",
+    "light": "#D5C5D4",
+    "dark": "#432A41",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Plum",
+    "aliases": [
+      "紫李",
+      "plum fruit"
+    ],
+    "basis": "典型紫李表皮的灰紫色"
+  },
+  "红李": {
+    "hex": "#A33C57",
+    "primary": "#A33C57",
+    "light": "#DEC4CB",
+    "dark": "#572331",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Red Plum",
+    "aliases": [
+      "红布林",
+      "red plum fruit"
+    ],
+    "basis": "红李表皮的深玫红色"
+  },
+  "黑李": {
+    "hex": "#4C274C",
+    "primary": "#4C274C",
+    "light": "#CCB3CC",
+    "dark": "#291629",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Black Plum",
+    "aliases": [
+      "黑布林",
+      "black plum fruit"
+    ],
+    "basis": "黑李表皮的深紫色"
+  },
+  "荔枝": {
+    "hex": "#F0D4D5",
+    "primary": "#F0D4D5",
+    "light": "#F8F3F3",
+    "dark": "#B44549",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Lychee",
+    "aliases": [
+      "荔枝果肉",
+      "litchi",
+      "lychee fruit"
+    ],
+    "basis": "荔枝果肉的半透明粉白色"
+  },
+  "龙眼": {
+    "hex": "#D8B58A",
+    "primary": "#D8B58A",
+    "light": "#EEE7DE",
+    "dark": "#8E6635",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Longan",
+    "aliases": [
+      "桂圆",
+      "longan fruit"
+    ],
+    "basis": "龙眼果肉与果壳的淡棕金色"
+  },
+  "枇杷": {
+    "hex": "#E7B34D",
+    "primary": "#E7B34D",
+    "light": "#EEE4CF",
+    "dark": "#906819",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Loquat",
+    "aliases": [
+      "loquat fruit",
+      "枇杷果"
+    ],
+    "basis": "枇杷果皮的橙黄色"
+  },
+  "青葡萄": {
+    "hex": "#A9C85A",
+    "primary": "#A9C85A",
+    "light": "#E1E7D1",
+    "dark": "#60742B",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Green Grape",
+    "aliases": [
+      "绿葡萄",
+      "green grape fruit"
+    ],
+    "basis": "青葡萄表皮的黄绿色"
+  },
+  "白葡萄": {
+    "hex": "#D8D38A",
+    "primary": "#D8D38A",
+    "light": "#EEEDDE",
+    "dark": "#8E8835",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "White Grape",
+    "aliases": [
+      "white grape fruit",
+      "淡色葡萄"
+    ],
+    "basis": "白葡萄的浅黄绿色"
+  },
+  "红葡萄": {
+    "hex": "#B55358",
+    "primary": "#B55358",
+    "light": "#E1CECF",
+    "dark": "#632E31",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Red Grape",
+    "aliases": [
+      "red grape fruit",
+      "红提"
+    ],
+    "basis": "红葡萄表皮的暗红色"
+  },
+  "紫葡萄": {
+    "hex": "#6B3B73",
+    "primary": "#6B3B73",
+    "light": "#D1BFD4",
+    "dark": "#3A223E",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Purple Grape",
+    "aliases": [
+      "黑葡萄",
+      "purple grape fruit",
+      "葡萄"
+    ],
+    "basis": "紫葡萄表皮的紫色"
+  },
+  "石榴": {
+    "hex": "#B52C3B",
+    "primary": "#B52C3B",
+    "light": "#E3C0C4",
+    "dark": "#611B23",
+    "textColor": "#FFFFFF",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Pomegranate",
+    "aliases": [
+      "pomegranate fruit",
+      "石榴籽"
+    ],
+    "basis": "石榴籽的宝石红色"
+  },
+  "榅桲": {
+    "hex": "#D9B94F",
+    "primary": "#D9B94F",
+    "light": "#EAE4CF",
+    "dark": "#826B21",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Quince",
+    "aliases": [
+      "木梨",
+      "quince fruit"
+    ],
+    "basis": "成熟榅桲表皮的金黄色"
+  },
+  "柿子": {
+    "hex": "#E47B2A",
+    "primary": "#E47B2A",
+    "light": "#EBD6C6",
+    "dark": "#7F4315",
+    "textColor": "#111111",
+    "family": "orchard_stone",
+    "category": "仁果与核果",
+    "english": "Persimmon",
+    "aliases": [
+      "persimmon fruit",
+      "甜柿"
+    ],
+    "basis": "熟柿子的橙色"
+  },
+  "菠萝": {
+    "hex": "#EFD046",
+    "primary": "#EFD046",
+    "light": "#F0E9CE",
+    "dark": "#977F13",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Pineapple",
+    "aliases": [
+      "凤梨",
+      "pineapple fruit"
+    ],
+    "basis": "菠萝果肉的鲜黄色"
+  },
+  "芒果": {
+    "hex": "#F2AE34",
+    "primary": "#F2AE34",
+    "light": "#EFE2CA",
+    "dark": "#92630F",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Mango",
+    "aliases": [
+      "mango fruit",
+      "熟芒果"
+    ],
+    "basis": "熟芒果果肉的金黄色"
+  },
+  "木瓜": {
+    "hex": "#F2914F",
+    "primary": "#F2914F",
+    "light": "#F1DED1",
+    "dark": "#9E4B12",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Papaya",
+    "aliases": [
+      "papaya fruit",
+      "番木瓜"
+    ],
+    "basis": "木瓜果肉的橙色"
+  },
+  "百香果": {
+    "hex": "#D8B52B",
+    "primary": "#D8B52B",
+    "light": "#E8E1C6",
+    "dark": "#74621A",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Passion Fruit",
+    "aliases": [
+      "热情果",
+      "passionfruit",
+      "maracuja"
+    ],
+    "basis": "百香果果肉与籽液的金黄色"
+  },
+  "红心番石榴": {
+    "hex": "#EE9EAA",
+    "primary": "#EE9EAA",
+    "light": "#F5E5E7",
+    "dark": "#B3273C",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Pink Guava",
+    "aliases": [
+      "红心芭乐",
+      "粉红番石榴",
+      "pink guava fruit"
+    ],
+    "basis": "红心番石榴果肉的粉红色"
+  },
+  "白心番石榴": {
+    "hex": "#E5DCC1",
+    "primary": "#E5DCC1",
+    "light": "#F4F3ED",
+    "dark": "#A08A48",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "White Guava",
+    "aliases": [
+      "白心芭乐",
+      "white guava fruit"
+    ],
+    "basis": "白心番石榴果肉的淡乳绿色"
+  },
+  "香蕉": {
+    "hex": "#EEDC68",
+    "primary": "#EEDC68",
+    "light": "#F1EED7",
+    "dark": "#A39119",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Banana",
+    "aliases": [
+      "banana fruit",
+      "黄香蕉"
+    ],
+    "basis": "香蕉果皮的柔黄色"
+  },
+  "熟香蕉": {
+    "hex": "#D9BD42",
+    "primary": "#D9BD42",
+    "light": "#EAE4CC",
+    "dark": "#7D6C1E",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Ripe Banana",
+    "aliases": [
+      "ripe banana fruit",
+      "过熟香蕉"
+    ],
+    "basis": "熟香蕉表皮偏深的黄色"
+  },
+  "椰子": {
+    "hex": "#E9E1D4",
+    "primary": "#E9E1D4",
+    "light": "#F7F5F3",
+    "dark": "#9F8356",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Coconut",
+    "aliases": [
+      "椰肉",
+      "coconut flesh",
+      "coconut fruit"
+    ],
+    "basis": "椰肉的米白色"
+  },
+  "西瓜": {
+    "hex": "#E86572",
+    "primary": "#E86572",
+    "light": "#F0D6D8",
+    "dark": "#9A1D2A",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Watermelon",
+    "aliases": [
+      "watermelon fruit",
+      "西瓜瓤"
+    ],
+    "basis": "西瓜果肉的珊瑚红色"
+  },
+  "哈密瓜": {
+    "hex": "#EABE76",
+    "primary": "#EABE76",
+    "light": "#F1E8DA",
+    "dark": "#A2711F",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Cantaloupe",
+    "aliases": [
+      "网纹瓜",
+      "cantaloupe melon"
+    ],
+    "basis": "哈密瓜果肉的橙黄色"
+  },
+  "蜜瓜": {
+    "hex": "#C4DF89",
+    "primary": "#C4DF89",
+    "light": "#EAF0DE",
+    "dark": "#76972F",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Honeydew",
+    "aliases": [
+      "白兰瓜",
+      "honeydew melon"
+    ],
+    "basis": "蜜瓜果肉的浅绿色"
+  },
+  "猕猴桃": {
+    "hex": "#7FAD43",
+    "primary": "#7FAD43",
+    "light": "#D5E0C8",
+    "dark": "#465D27",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Kiwi",
+    "aliases": [
+      "奇异果",
+      "kiwifruit",
+      "kiwi fruit"
+    ],
+    "basis": "猕猴桃果肉的鲜绿色"
+  },
+  "杨桃": {
+    "hex": "#E7C94D",
+    "primary": "#E7C94D",
+    "light": "#EEE8CF",
+    "dark": "#907919",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Starfruit",
+    "aliases": [
+      "星果",
+      "carambola",
+      "star fruit"
+    ],
+    "basis": "杨桃果肉的黄色"
+  },
+  "火龙果": {
+    "hex": "#E74D86",
+    "primary": "#E74D86",
+    "light": "#EECFDB",
+    "dark": "#901945",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Dragon Fruit",
+    "aliases": [
+      "红龙果",
+      "pitaya",
+      "dragonfruit"
+    ],
+    "basis": "火龙果外皮的亮玫红色"
+  },
+  "山竹": {
+    "hex": "#6B2E5B",
+    "primary": "#6B2E5B",
+    "light": "#D4B8CD",
+    "dark": "#3A1B31",
+    "textColor": "#FFFFFF",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Mangosteen",
+    "aliases": [
+      "mangosteen fruit",
+      "山竹果"
+    ],
+    "basis": "山竹外壳的深紫色"
+  },
+  "红毛丹": {
+    "hex": "#D9484E",
+    "primary": "#D9484E",
+    "light": "#EACDCE",
+    "dark": "#7F2023",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Rambutan",
+    "aliases": [
+      "rambutan fruit",
+      "毛荔枝"
+    ],
+    "basis": "红毛丹外皮的红色"
+  },
+  "菠萝蜜": {
+    "hex": "#E7B84D",
+    "primary": "#E7B84D",
+    "light": "#EEE5CF",
+    "dark": "#906C19",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Jackfruit",
+    "aliases": [
+      "木菠萝",
+      "jackfruit fruit"
+    ],
+    "basis": "菠萝蜜果肉的金黄色"
+  },
+  "刺果番荔枝": {
+    "hex": "#B9CF8B",
+    "primary": "#B9CF8B",
+    "light": "#E7ECDE",
+    "dark": "#6C833B",
+    "textColor": "#111111",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Soursop",
+    "aliases": [
+      "酸番荔枝",
+      "soursop fruit",
+      "guanabana"
+    ],
+    "basis": "刺果番荔枝果皮的浅绿色"
+  },
+  "罗望子": {
+    "hex": "#8A5B36",
+    "primary": "#8A5B36",
+    "light": "#DACABE",
+    "dark": "#4A3220",
+    "textColor": "#FFFFFF",
+    "family": "tropical_melon",
+    "category": "热带水果与瓜果",
+    "english": "Tamarind",
+    "aliases": [
+      "酸角",
+      "tamarind fruit"
+    ],
+    "basis": "罗望子果肉的棕褐色"
+  },
+  "葡萄干": {
+    "hex": "#6F4634",
+    "primary": "#6F4634",
+    "light": "#D4C3BB",
+    "dark": "#3C271E",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Raisin",
+    "aliases": [
+      "黑葡萄干",
+      "raisin fruit"
+    ],
+    "basis": "深色葡萄干的紫棕色"
+  },
+  "金葡萄干": {
+    "hex": "#B8893B",
+    "primary": "#B8893B",
+    "light": "#E2D8C7",
+    "dark": "#624B23",
+    "textColor": "#111111",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Golden Raisin",
+    "aliases": [
+      "黄金葡萄干",
+      "sultana",
+      "golden raisin fruit"
+    ],
+    "basis": "金葡萄干的琥珀金色"
+  },
+  "椰枣": {
+    "hex": "#825031",
+    "primary": "#825031",
+    "light": "#D9C7BB",
+    "dark": "#462C1D",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Date",
+    "aliases": [
+      "海枣",
+      "date fruit",
+      "dates"
+    ],
+    "basis": "椰枣果肉的深棕色"
+  },
+  "无花果干": {
+    "hex": "#84506B",
+    "primary": "#84506B",
+    "light": "#D7C8D0",
+    "dark": "#472D3B",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Dried Fig",
+    "aliases": [
+      "无花果",
+      "fig",
+      "dried fig fruit"
+    ],
+    "basis": "无花果干的紫棕色"
+  },
+  "西梅干": {
+    "hex": "#5F3F57",
+    "primary": "#5F3F57",
+    "light": "#CEC0CA",
+    "dark": "#34232F",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Prune",
+    "aliases": [
+      "西梅",
+      "dried plum",
+      "prune fruit"
+    ],
+    "basis": "西梅干的深紫褐色"
+  },
+  "杏脯": {
+    "hex": "#C87837",
+    "primary": "#C87837",
+    "light": "#E5D5C8",
+    "dark": "#6B4221",
+    "textColor": "#111111",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Dried Apricot",
+    "aliases": [
+      "杏干",
+      "dried apricot fruit"
+    ],
+    "basis": "杏脯的深橙色"
+  },
+  "蔓越莓干": {
+    "hex": "#8F2947",
+    "primary": "#8F2947",
+    "light": "#DDB9C3",
+    "dark": "#4C1928",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Dried Cranberry",
+    "aliases": [
+      "dried cranberry fruit",
+      "果干蔓越莓"
+    ],
+    "basis": "蔓越莓干的暗红色"
+  },
+  "樱桃干": {
+    "hex": "#6C2633",
+    "primary": "#6C2633",
+    "light": "#D6B3BA",
+    "dark": "#3A161D",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Dried Cherry",
+    "aliases": [
+      "dried cherry fruit",
+      "果干樱桃"
+    ],
+    "basis": "樱桃干的深酒红色"
+  },
+  "糖渍橙皮": {
+    "hex": "#C96B22",
+    "primary": "#C96B22",
+    "light": "#E6D1C0",
+    "dark": "#6B3B16",
+    "textColor": "#111111",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Candied Orange Peel",
+    "aliases": [
+      "蜜渍橙皮",
+      "candied orange",
+      "orange confit"
+    ],
+    "basis": "糖渍橙皮的深橙色"
+  },
+  "糖渍柠檬皮": {
+    "hex": "#C6A72C",
+    "primary": "#C6A72C",
+    "light": "#E5DEC3",
+    "dark": "#6A5A1C",
+    "textColor": "#111111",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Candied Lemon Peel",
+    "aliases": [
+      "蜜渍柠檬皮",
+      "candied lemon",
+      "lemon confit"
+    ],
+    "basis": "糖渍柠檬皮的金黄色"
+  },
+  "红枣": {
+    "hex": "#8A332B",
+    "primary": "#8A332B",
+    "light": "#DBBCB9",
+    "dark": "#4A1E1A",
+    "textColor": "#FFFFFF",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Red Jujube",
+    "aliases": [
+      "大枣",
+      "干枣",
+      "jujube",
+      "red date"
+    ],
+    "basis": "红枣果皮的红棕色"
+  },
+  "菠萝干": {
+    "hex": "#C6A63A",
+    "primary": "#C6A63A",
+    "light": "#E4DEC8",
+    "dark": "#6A5A23",
+    "textColor": "#111111",
+    "family": "dried_fruit",
+    "category": "干果",
+    "english": "Dried Pineapple",
+    "aliases": [
+      "dried pineapple fruit",
+      "凤梨干"
+    ],
+    "basis": "菠萝干的金黄色"
+  },
+  "白砂糖": {
+    "hex": "#F1EEE7",
+    "primary": "#F1EEE7",
+    "light": "#FAF9F8",
+    "dark": "#A08E63",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "White Sugar",
+    "aliases": [
+      "砂糖",
+      "white sugar crystal",
+      "蔗糖"
+    ],
+    "basis": "白砂糖晶体的暖白色"
+  },
+  "甘蔗糖": {
+    "hex": "#D9C27A",
+    "primary": "#D9C27A",
+    "light": "#EDE9DA",
+    "dark": "#8D762E",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Cane Sugar",
+    "aliases": [
+      "原蔗糖",
+      "raw cane sugar",
+      "cane sweetness"
+    ],
+    "basis": "浅色原蔗糖的金米色"
+  },
+  "红糖": {
+    "hex": "#9A642F",
+    "primary": "#9A642F",
+    "light": "#DECDBD",
+    "dark": "#52371C",
+    "textColor": "#FFFFFF",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Brown Sugar",
+    "aliases": [
+      "brown sugar",
+      "赤砂糖"
+    ],
+    "basis": "红糖块的中棕色"
+  },
+  "黑糖": {
+    "hex": "#6F4024",
+    "primary": "#6F4024",
+    "light": "#D7C0B3",
+    "dark": "#3B2415",
+    "textColor": "#FFFFFF",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Dark Brown Sugar",
+    "aliases": [
+      "dark brown sugar",
+      "黑砂糖"
+    ],
+    "basis": "深色黑糖的焦褐色"
+  },
+  "潘妮拉糖": {
+    "hex": "#A86B31",
+    "primary": "#A86B31",
+    "light": "#E0D0C0",
+    "dark": "#5A3B1E",
+    "textColor": "#FFFFFF",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Panela",
+    "aliases": [
+      "panela sugar",
+      "非精制蔗糖"
+    ],
+    "basis": "潘妮拉未精炼蔗糖的琥珀棕色"
+  },
+  "糖蜜": {
+    "hex": "#4F2B1B",
+    "primary": "#4F2B1B",
+    "light": "#D2B7AB",
+    "dark": "#2A1810",
+    "textColor": "#FFFFFF",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Molasses",
+    "aliases": [
+      "molasses syrup",
+      "黑糖蜜"
+    ],
+    "basis": "糖蜜的深褐色"
+  },
+  "焦糖": {
+    "hex": "#C6802D",
+    "primary": "#C6802D",
+    "light": "#E5D6C4",
+    "dark": "#6A461C",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Caramel",
+    "aliases": [
+      "caramelized sugar",
+      "焦糖甜"
+    ],
+    "basis": "焦糖的琥珀橙色"
+  },
+  "太妃糖": {
+    "hex": "#B87439",
+    "primary": "#B87439",
+    "light": "#E2D3C6",
+    "dark": "#624022",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Toffee",
+    "aliases": [
+      "toffee candy",
+      "奶油太妃"
+    ],
+    "basis": "太妃糖的奶油棕色"
+  },
+  "蜂蜜": {
+    "hex": "#D79721",
+    "primary": "#D79721",
+    "light": "#E8DBC2",
+    "dark": "#725216",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Honey",
+    "aliases": [
+      "蜂蜜甜",
+      "honey sweetness",
+      "amber honey"
+    ],
+    "basis": "琥珀蜂蜜色"
+  },
+  "枫糖浆": {
+    "hex": "#A55B28",
+    "primary": "#A55B28",
+    "light": "#E1CBBC",
+    "dark": "#583319",
+    "textColor": "#FFFFFF",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Maple Syrup",
+    "aliases": [
+      "maple",
+      "maple sugar",
+      "枫糖"
+    ],
+    "basis": "枫糖浆的红棕色"
+  },
+  "麦芽糖": {
+    "hex": "#C99A45",
+    "primary": "#C99A45",
+    "light": "#E6DCCC",
+    "dark": "#705525",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Maltose",
+    "aliases": [
+      "麦芽糖浆",
+      "malt sugar"
+    ],
+    "basis": "麦芽糖浆的金棕色"
+  },
+  "冰糖": {
+    "hex": "#E6DDB8",
+    "primary": "#E6DDB8",
+    "light": "#F4F2EB",
+    "dark": "#A49040",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Rock Sugar",
+    "aliases": [
+      "黄冰糖",
+      "rock candy",
+      "crystal sugar"
+    ],
+    "basis": "冰糖晶体的浅米黄色"
+  },
+  "棉花糖": {
+    "hex": "#F0B6CA",
+    "primary": "#F0B6CA",
+    "light": "#F7EBEF",
+    "dark": "#BA2E5E",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Cotton Candy",
+    "aliases": [
+      "cotton candy sweetness",
+      "粉色棉花糖"
+    ],
+    "basis": "粉色棉花糖的柔粉色"
+  },
+  "软糖": {
+    "hex": "#F5E9E1",
+    "primary": "#F5E9E1",
+    "light": "#FBF8F7",
+    "dark": "#BB7647",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Marshmallow",
+    "aliases": [
+      "棉花软糖",
+      "marshmallow candy"
+    ],
+    "basis": "白色棉花软糖的暖白色"
+  },
+  "香草": {
+    "hex": "#E7D7AC",
+    "primary": "#E7D7AC",
+    "light": "#F4F1E8",
+    "dark": "#A78937",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Vanilla",
+    "aliases": [
+      "香草荚",
+      "vanilla bean",
+      "vanilla cream"
+    ],
+    "basis": "香草奶油联想的米黄色"
+  },
+  "奶油": {
+    "hex": "#F2E6CE",
+    "primary": "#F2E6CE",
+    "light": "#F9F6F2",
+    "dark": "#BD9139",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Cream",
+    "aliases": [
+      "鲜奶油",
+      "creaminess",
+      "whipping cream"
+    ],
+    "basis": "鲜奶油的暖乳白色"
+  },
+  "黄油": {
+    "hex": "#E7C75B",
+    "primary": "#E7C75B",
+    "light": "#EFE8D3",
+    "dark": "#95791C",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Butter",
+    "aliases": [
+      "buttery",
+      "butter flavor"
+    ],
+    "basis": "黄油的淡金黄色"
+  },
+  "炼乳": {
+    "hex": "#EAD9B6",
+    "primary": "#EAD9B6",
+    "light": "#F5F2EB",
+    "dark": "#AD8738",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Condensed Milk",
+    "aliases": [
+      "甜炼乳",
+      "condensed milk sweetness"
+    ],
+    "basis": "炼乳的浓稠奶黄色"
+  },
+  "奶糖": {
+    "hex": "#D9B889",
+    "primary": "#D9B889",
+    "light": "#EEE7DE",
+    "dark": "#8F6933",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Milk Candy",
+    "aliases": [
+      "牛奶糖",
+      "milk caramel",
+      "milk candy sweetness"
+    ],
+    "basis": "奶糖的奶棕色"
+  },
+  "曲奇": {
+    "hex": "#C89B69",
+    "primary": "#C89B69",
+    "light": "#E8DFD5",
+    "dark": "#785630",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Cookie",
+    "aliases": [
+      "cookie dough",
+      "黄油曲奇"
+    ],
+    "basis": "烤曲奇的浅金棕色"
+  },
+  "饼干": {
+    "hex": "#B9834F",
+    "primary": "#B9834F",
+    "light": "#E2D7CD",
+    "dark": "#65482C",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Biscuit",
+    "aliases": [
+      "cracker",
+      "biscuit flavor",
+      "苏打饼干"
+    ],
+    "basis": "烘烤饼干的金棕色"
+  },
+  "吐司": {
+    "hex": "#B97845",
+    "primary": "#B97845",
+    "light": "#E2D5CA",
+    "dark": "#634229",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Toast",
+    "aliases": [
+      "烤面包",
+      "toasted bread",
+      "toast flavor"
+    ],
+    "basis": "吐司表面的烘烤棕色"
+  },
+  "布里欧修": {
+    "hex": "#D6A65A",
+    "primary": "#D6A65A",
+    "light": "#EAE1D2",
+    "dark": "#825E25",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Brioche",
+    "aliases": [
+      "brioche bread",
+      "奶油面包"
+    ],
+    "basis": "布里欧修面包的金黄色"
+  },
+  "蛋糕": {
+    "hex": "#E4B8A4",
+    "primary": "#E4B8A4",
+    "light": "#F2EAE6",
+    "dark": "#A25836",
+    "textColor": "#111111",
+    "family": "sweet_bakery",
+    "category": "甜感与烘焙",
+    "english": "Cake",
+    "aliases": [
+      "海绵蛋糕",
+      "cake crumb",
+      "vanilla cake"
+    ],
+    "basis": "蛋糕胚的柔和粉米色"
+  },
+  "红茶": {
+    "hex": "#9B4F2E",
+    "primary": "#9B4F2E",
+    "light": "#DEC7BD",
+    "dark": "#532C1C",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Black Tea",
+    "aliases": [
+      "black tea infusion",
+      "红茶茶汤"
+    ],
+    "basis": "红茶茶汤的红棕色"
+  },
+  "绿茶": {
+    "hex": "#7CA467",
+    "primary": "#7CA467",
+    "light": "#D6DED2",
+    "dark": "#445A38",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Green Tea",
+    "aliases": [
+      "green tea infusion",
+      "煎茶"
+    ],
+    "basis": "绿茶叶与茶汤的柔绿色"
+  },
+  "白茶": {
+    "hex": "#D8D5B8",
+    "primary": "#D8D5B8",
+    "light": "#F1F0EA",
+    "dark": "#8B8651",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "White Tea",
+    "aliases": [
+      "white tea infusion",
+      "白牡丹茶"
+    ],
+    "basis": "白茶芽叶与淡茶汤的灰米色"
+  },
+  "乌龙茶": {
+    "hex": "#8B684C",
+    "primary": "#8B684C",
+    "light": "#D8CFC7",
+    "dark": "#4B392B",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Oolong Tea",
+    "aliases": [
+      "oolong",
+      "oolong infusion",
+      "铁观音"
+    ],
+    "basis": "乌龙茶茶汤的琥珀棕色"
+  },
+  "伯爵茶": {
+    "hex": "#7F654F",
+    "primary": "#7F654F",
+    "light": "#D5CEC7",
+    "dark": "#45382D",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Earl Grey",
+    "aliases": [
+      "earl grey tea",
+      "佛手柑红茶"
+    ],
+    "basis": "伯爵茶茶汤的棕灰色"
+  },
+  "茉莉花茶": {
+    "hex": "#CEC58A",
+    "primary": "#CEC58A",
+    "light": "#EBE9DE",
+    "dark": "#82793B",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Jasmine Tea",
+    "aliases": [
+      "jasmine green tea",
+      "茉莉茶"
+    ],
+    "basis": "茉莉花茶淡黄绿茶汤"
+  },
+  "洋甘菊茶": {
+    "hex": "#DCC35A",
+    "primary": "#DCC35A",
+    "light": "#ECE7D2",
+    "dark": "#887522",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Chamomile Tea",
+    "aliases": [
+      "chamomile infusion",
+      "甘菊茶"
+    ],
+    "basis": "洋甘菊茶的金黄色"
+  },
+  "洛神花": {
+    "hex": "#B63862",
+    "primary": "#B63862",
+    "light": "#E2C5CF",
+    "dark": "#612237",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Hibiscus",
+    "aliases": [
+      "洛神花茶",
+      "hibiscus tea",
+      "roselle"
+    ],
+    "basis": "洛神花茶的深玫红色"
+  },
+  "香茅": {
+    "hex": "#B7CF66",
+    "primary": "#B7CF66",
+    "light": "#E4E9D4",
+    "dark": "#6B7E2C",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Lemongrass",
+    "aliases": [
+      "柠檬草",
+      "lemongrass herb"
+    ],
+    "basis": "香茅叶的黄绿色"
+  },
+  "薄荷": {
+    "hex": "#79BEAA",
+    "primary": "#79BEAA",
+    "light": "#D8E6E2",
+    "dark": "#3A7161",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Mint",
+    "aliases": [
+      "peppermint",
+      "spearmint",
+      "mint herb"
+    ],
+    "basis": "薄荷叶的清凉青绿色"
+  },
+  "罗勒": {
+    "hex": "#579052",
+    "primary": "#579052",
+    "light": "#CBD9CA",
+    "dark": "#314E2E",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Basil",
+    "aliases": [
+      "basil herb",
+      "甜罗勒"
+    ],
+    "basis": "罗勒叶的中绿色"
+  },
+  "迷迭香": {
+    "hex": "#647F56",
+    "primary": "#647F56",
+    "light": "#CED5CA",
+    "dark": "#374530",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Rosemary",
+    "aliases": [
+      "rosemary herb",
+      "迷迭香草"
+    ],
+    "basis": "迷迭香针叶的灰绿色"
+  },
+  "百里香": {
+    "hex": "#78875F",
+    "primary": "#78875F",
+    "light": "#D3D7CD",
+    "dark": "#424935",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Thyme",
+    "aliases": [
+      "thyme herb",
+      "百里香草"
+    ],
+    "basis": "百里香叶的橄榄绿色"
+  },
+  "鼠尾草": {
+    "hex": "#87927A",
+    "primary": "#87927A",
+    "light": "#D8DBD6",
+    "dark": "#4A5043",
+    "textColor": "#111111",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Sage",
+    "aliases": [
+      "sage herb",
+      "鼠尾草香"
+    ],
+    "basis": "鼠尾草叶的灰绿色"
+  },
+  "路易波士茶": {
+    "hex": "#A64E2F",
+    "primary": "#A64E2F",
+    "light": "#E0C8BF",
+    "dark": "#592C1C",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Rooibos",
+    "aliases": [
+      "南非红茶",
+      "rooibos tea",
+      "red bush tea"
+    ],
+    "basis": "路易波士茶汤的红橙棕色"
+  },
+  "普洱茶": {
+    "hex": "#6C4432",
+    "primary": "#6C4432",
+    "light": "#D3C2BA",
+    "dark": "#3A261D",
+    "textColor": "#FFFFFF",
+    "family": "tea_herbal",
+    "category": "茶感与草本",
+    "english": "Pu-erh Tea",
+    "aliases": [
+      "普洱",
+      "pu erh",
+      "pu'er tea"
+    ],
+    "basis": "熟普洱茶汤的深棕色"
+  },
+  "杏仁": {
+    "hex": "#D6AD88",
+    "primary": "#D6AD88",
+    "light": "#EDE5DE",
+    "dark": "#8B5E35",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Almond",
+    "aliases": [
+      "almond nut",
+      "生杏仁"
+    ],
+    "basis": "杏仁仁的浅棕米色"
+  },
+  "烤杏仁": {
+    "hex": "#A9754E",
+    "primary": "#A9754E",
+    "light": "#DFD4CB",
+    "dark": "#5B412D",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Roasted Almond",
+    "aliases": [
+      "roasted almond nut",
+      "烘烤杏仁"
+    ],
+    "basis": "烤杏仁表面的深金棕色"
+  },
+  "榛子": {
+    "hex": "#B58050",
+    "primary": "#B58050",
+    "light": "#E1D7CD",
+    "dark": "#63462D",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Hazelnut",
+    "aliases": [
+      "hazelnut nut",
+      "榛果"
+    ],
+    "basis": "榛子壳与果仁的暖棕色"
+  },
+  "核桃": {
+    "hex": "#866145",
+    "primary": "#866145",
+    "light": "#D8CDC4",
+    "dark": "#483627",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Walnut",
+    "aliases": [
+      "walnut nut",
+      "胡桃"
+    ],
+    "basis": "核桃仁与壳的中褐色"
+  },
+  "碧根果": {
+    "hex": "#8E5A38",
+    "primary": "#8E5A38",
+    "light": "#DBCAC0",
+    "dark": "#4C3221",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Pecan",
+    "aliases": [
+      "山核桃",
+      "pecan nut"
+    ],
+    "basis": "碧根果果仁的深棕色"
+  },
+  "开心果": {
+    "hex": "#A5B66A",
+    "primary": "#A5B66A",
+    "light": "#E0E3D4",
+    "dark": "#5D6836",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Pistachio",
+    "aliases": [
+      "pistachio nut",
+      "阿月浑子"
+    ],
+    "basis": "开心果仁的黄绿色"
+  },
+  "花生": {
+    "hex": "#B89267",
+    "primary": "#B89267",
+    "light": "#E3DCD3",
+    "dark": "#695135",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Peanut",
+    "aliases": [
+      "peanut nut",
+      "落花生"
+    ],
+    "basis": "花生仁与薄皮的浅棕色"
+  },
+  "栗子": {
+    "hex": "#825437",
+    "primary": "#825437",
+    "light": "#D8C8BE",
+    "dark": "#462F20",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Chestnut",
+    "aliases": [
+      "板栗",
+      "chestnut nut"
+    ],
+    "basis": "栗子壳的红棕色"
+  },
+  "腰果": {
+    "hex": "#D8BA8E",
+    "primary": "#D8BA8E",
+    "light": "#EEE8DF",
+    "dark": "#8F6B36",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Cashew",
+    "aliases": [
+      "cashew nut",
+      "腰果仁"
+    ],
+    "basis": "腰果仁的奶油米色"
+  },
+  "夏威夷果": {
+    "hex": "#DCC79E",
+    "primary": "#DCC79E",
+    "light": "#F0ECE4",
+    "dark": "#95763B",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Macadamia",
+    "aliases": [
+      "澳洲坚果",
+      "macadamia nut"
+    ],
+    "basis": "夏威夷果仁的淡米黄色"
+  },
+  "可可碎": {
+    "hex": "#62402D",
+    "primary": "#62402D",
+    "light": "#D2C0B7",
+    "dark": "#35241A",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Cacao Nib",
+    "aliases": [
+      "可可豆碎",
+      "cacao nibs",
+      "cocoa nib"
+    ],
+    "basis": "烘烤可可碎的深棕色"
+  },
+  "可可粉": {
+    "hex": "#70472F",
+    "primary": "#70472F",
+    "light": "#D5C3B9",
+    "dark": "#3C271B",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Cocoa Powder",
+    "aliases": [
+      "cocoa",
+      "cacao powder",
+      "可可"
+    ],
+    "basis": "可可粉的标准棕色"
+  },
+  "牛奶巧克力": {
+    "hex": "#855137",
+    "primary": "#855137",
+    "light": "#D9C7BE",
+    "dark": "#472D20",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Milk Chocolate",
+    "aliases": [
+      "milk chocolate flavor",
+      "奶巧"
+    ],
+    "basis": "牛奶巧克力的中棕色"
+  },
+  "黑巧克力": {
+    "hex": "#432821",
+    "primary": "#432821",
+    "light": "#CBB5B0",
+    "dark": "#241613",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Dark Chocolate",
+    "aliases": [
+      "dark chocolate flavor",
+      "高可可巧克力",
+      "70% chocolate"
+    ],
+    "basis": "高可可黑巧克力的深褐色"
+  },
+  "白巧克力": {
+    "hex": "#E7D9C5",
+    "primary": "#E7D9C5",
+    "light": "#F5F2EF",
+    "dark": "#A37E49",
+    "textColor": "#111111",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "White Chocolate",
+    "aliases": [
+      "white chocolate flavor",
+      "白巧"
+    ],
+    "basis": "白巧克力的奶油象牙色"
+  },
+  "巧克力布朗尼": {
+    "hex": "#5B342A",
+    "primary": "#5B342A",
+    "light": "#D0BBB5",
+    "dark": "#311D18",
+    "textColor": "#FFFFFF",
+    "family": "nuts_cocoa",
+    "category": "坚果与可可",
+    "english": "Chocolate Brownie",
+    "aliases": [
+      "brownie",
+      "chocolate cake",
+      "布朗尼"
+    ],
+    "basis": "布朗尼内部的深巧克力棕色"
+  },
+  "肉桂": {
+    "hex": "#A65C2B",
+    "primary": "#A65C2B",
+    "light": "#E0CBBD",
+    "dark": "#59331A",
+    "textColor": "#FFFFFF",
+    "family": "spice",
+    "category": "香料",
+    "english": "Cinnamon",
+    "aliases": [
+      "cinnamon spice",
+      "桂皮"
+    ],
+    "basis": "肉桂皮的红棕色"
+  },
+  "丁香": {
+    "hex": "#714126",
+    "primary": "#714126",
+    "light": "#D7C1B4",
+    "dark": "#3D2417",
+    "textColor": "#FFFFFF",
+    "family": "spice",
+    "category": "香料",
+    "english": "Clove",
+    "aliases": [
+      "clove spice",
+      "丁香香料"
+    ],
+    "basis": "干丁香的深棕色"
+  },
+  "肉豆蔻": {
+    "hex": "#93643A",
+    "primary": "#93643A",
+    "light": "#DBCDC1",
+    "dark": "#4F3722",
+    "textColor": "#FFFFFF",
+    "family": "spice",
+    "category": "香料",
+    "english": "Nutmeg",
+    "aliases": [
+      "nutmeg spice",
+      "肉豆蔻香"
+    ],
+    "basis": "肉豆蔻仁的暖棕色"
+  },
+  "豆蔻": {
+    "hex": "#9FAC5A",
+    "primary": "#9FAC5A",
+    "light": "#DDDFCF",
+    "dark": "#575E32",
+    "textColor": "#111111",
+    "family": "spice",
+    "category": "香料",
+    "english": "Cardamom",
+    "aliases": [
+      "绿豆蔻",
+      "cardamom spice"
+    ],
+    "basis": "绿豆蔻荚的黄绿色"
+  },
+  "生姜": {
+    "hex": "#D3A148",
+    "primary": "#D3A148",
+    "light": "#E8DFCD",
+    "dark": "#7A5A22",
+    "textColor": "#111111",
+    "family": "spice",
+    "category": "香料",
+    "english": "Ginger",
+    "aliases": [
+      "姜",
+      "ginger spice",
+      "鲜姜"
+    ],
+    "basis": "生姜切面的金黄色"
+  },
+  "黑胡椒": {
+    "hex": "#454545",
+    "primary": "#454545",
+    "light": "#C3C3C3",
+    "dark": "#262626",
+    "textColor": "#FFFFFF",
+    "family": "spice",
+    "category": "香料",
+    "english": "Black Pepper",
+    "aliases": [
+      "black pepper spice",
+      "胡椒"
+    ],
+    "basis": "黑胡椒粒的炭灰色"
+  },
+  "粉红胡椒": {
+    "hex": "#D98187",
+    "primary": "#D98187",
+    "light": "#EDDCDD",
+    "dark": "#8E3037",
+    "textColor": "#111111",
+    "family": "spice",
+    "category": "香料",
+    "english": "Pink Pepper",
+    "aliases": [
+      "pink peppercorn",
+      "粉红椒"
+    ],
+    "basis": "粉红胡椒果实的柔红色"
+  },
+  "八角": {
+    "hex": "#68422F",
+    "primary": "#68422F",
+    "light": "#D3C1B8",
+    "dark": "#38251B",
+    "textColor": "#FFFFFF",
+    "family": "spice",
+    "category": "香料",
+    "english": "Star Anise",
+    "aliases": [
+      "大料",
+      "star anise spice"
+    ],
+    "basis": "干八角的木质深棕色"
+  },
+  "甘草": {
+    "hex": "#50372A",
+    "primary": "#50372A",
+    "light": "#CDBDB5",
+    "dark": "#2B1F18",
+    "textColor": "#FFFFFF",
+    "family": "spice",
+    "category": "香料",
+    "english": "Licorice",
+    "aliases": [
+      "liquorice",
+      "甘草根"
+    ],
+    "basis": "甘草根的深褐色"
+  },
+  "藏红花": {
+    "hex": "#D99418",
+    "primary": "#D99418",
+    "light": "#E9DABF",
+    "dark": "#735011",
+    "textColor": "#111111",
+    "family": "spice",
+    "category": "香料",
+    "english": "Saffron",
+    "aliases": [
+      "番红花",
+      "saffron spice"
+    ],
+    "basis": "藏红花浸液的金橙色"
+  },
+  "红酒": {
+    "hex": "#6D2932",
+    "primary": "#6D2932",
+    "light": "#D6B5B9",
+    "dark": "#3A181D",
+    "textColor": "#FFFFFF",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Red Wine",
+    "aliases": [
+      "葡萄酒",
+      "red wine aroma",
+      "winey"
+    ],
+    "basis": "红葡萄酒液的酒红色"
+  },
+  "白葡萄酒": {
+    "hex": "#D7C269",
+    "primary": "#D7C269",
+    "light": "#ECE7D6",
+    "dark": "#877529",
+    "textColor": "#111111",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "White Wine",
+    "aliases": [
+      "白酒香",
+      "white wine aroma"
+    ],
+    "basis": "白葡萄酒液的淡金黄色"
+  },
+  "香槟": {
+    "hex": "#E6D89B",
+    "primary": "#E6D89B",
+    "light": "#F2F0E4",
+    "dark": "#A48E2F",
+    "textColor": "#111111",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Champagne",
+    "aliases": [
+      "起泡酒",
+      "sparkling wine",
+      "champagne aroma"
+    ],
+    "basis": "香槟酒液的浅金色"
+  },
+  "朗姆酒": {
+    "hex": "#875331",
+    "primary": "#875331",
+    "light": "#DAC8BC",
+    "dark": "#482E1D",
+    "textColor": "#FFFFFF",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Rum",
+    "aliases": [
+      "rum aroma",
+      "深色朗姆"
+    ],
+    "basis": "深色朗姆酒的琥珀棕色"
+  },
+  "威士忌": {
+    "hex": "#B5702F",
+    "primary": "#B5702F",
+    "light": "#E2D1C1",
+    "dark": "#613E1D",
+    "textColor": "#111111",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Whisky",
+    "aliases": [
+      "whiskey",
+      "whisky aroma"
+    ],
+    "basis": "威士忌酒液的琥珀橙色"
+  },
+  "白兰地": {
+    "hex": "#9B5B2C",
+    "primary": "#9B5B2C",
+    "light": "#DECBBC",
+    "dark": "#53321B",
+    "textColor": "#FFFFFF",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Brandy",
+    "aliases": [
+      "干邑",
+      "cognac",
+      "brandy aroma"
+    ],
+    "basis": "白兰地酒液的红琥珀色"
+  },
+  "清酒": {
+    "hex": "#E8E0CC",
+    "primary": "#E8E0CC",
+    "light": "#F6F4F0",
+    "dark": "#A28A4E",
+    "textColor": "#111111",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Sake",
+    "aliases": [
+      "日本清酒",
+      "rice wine",
+      "sake aroma"
+    ],
+    "basis": "清酒的透明米白色联想"
+  },
+  "发酵水果": {
+    "hex": "#9E4963",
+    "primary": "#9E4963",
+    "light": "#DDC8CE",
+    "dark": "#552A37",
+    "textColor": "#FFFFFF",
+    "family": "boozy_fermented",
+    "category": "酒香与发酵",
+    "english": "Fermented Fruit",
+    "aliases": [
+      "水果发酵",
+      "fermented fruit aroma",
+      "酒渍水果"
+    ],
+    "basis": "发酵莓果与酒渍水果的深玫红色"
+  },
+  "雪松": {
+    "hex": "#826047",
+    "primary": "#826047",
+    "light": "#D7CCC5",
+    "dark": "#463528",
+    "textColor": "#FFFFFF",
+    "family": "roasted_woody",
+    "category": "烘烤与木质",
+    "english": "Cedar",
+    "aliases": [
+      "cedarwood",
+      "cedar wood",
+      "雪松木"
+    ],
+    "basis": "雪松木材的中棕色"
+  },
+  "烟草": {
+    "hex": "#916440",
+    "primary": "#916440",
+    "light": "#DACEC3",
+    "dark": "#4E3725",
+    "textColor": "#FFFFFF",
+    "family": "roasted_woody",
+    "category": "烘烤与木质",
+    "english": "Tobacco",
+    "aliases": [
+      "tobacco leaf",
+      "烟叶"
+    ],
+    "basis": "干烟草叶的棕褐色"
+  },
+  "麦芽": {
+    "hex": "#B78545",
+    "primary": "#B78545",
+    "light": "#E1D7CA",
+    "dark": "#624928",
+    "textColor": "#111111",
+    "family": "roasted_woody",
+    "category": "烘烤与木质",
+    "english": "Malt",
+    "aliases": [
+      "malted grain",
+      "malt aroma"
+    ],
+    "basis": "麦芽谷粒的金棕色"
+  },
+  "烤谷物": {
+    "hex": "#9D6D3F",
+    "primary": "#9D6D3F",
+    "light": "#DDD0C4",
+    "dark": "#543C25",
+    "textColor": "#FFFFFF",
+    "family": "roasted_woody",
+    "category": "烘烤与木质",
+    "english": "Roasted Grain",
+    "aliases": [
+      "烘烤谷物",
+      "toasted grain",
+      "roasted cereal"
+    ],
+    "basis": "烤谷物表面的深金棕色"
+  },
+  "烟熏": {
+    "hex": "#686868",
+    "primary": "#686868",
+    "light": "#CFCFCF",
+    "dark": "#393939",
+    "textColor": "#FFFFFF",
+    "family": "roasted_woody",
+    "category": "烘烤与木质",
+    "english": "Smoke",
+    "aliases": [
+      "smoky",
+      "smoke aroma",
+      "烟味"
+    ],
+    "basis": "低饱和烟雾灰色"
+  },
+  "烘焙咖啡": {
+    "hex": "#4A2F24",
+    "primary": "#4A2F24",
+    "light": "#CDB9B1",
+    "dark": "#281A15",
+    "textColor": "#FFFFFF",
+    "family": "roasted_woody",
+    "category": "烘烤与木质",
+    "english": "Roasted Coffee",
+    "aliases": [
+      "咖啡香",
+      "roasted coffee aroma",
+      "roast"
+    ],
+    "basis": "深度烘焙咖啡豆的深褐色"
+  }
+}

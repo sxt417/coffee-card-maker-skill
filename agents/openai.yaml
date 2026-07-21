@@ -1,4 +1,5 @@
 interface:
-  display_name: "Coffee Card Maker"
-  short_description: "根据咖啡名称与风味词生成中英文有机颗粒渐变风味卡片"
-  default_prompt: "使用 $coffee-card-maker 根据咖啡名称和按强弱排序的风味词，生成一张中文或英文的 3:4 风味渐变卡。"
+  display_name: "Coffee Visual Identity System 2.1"
+  short_description: "按处理法、风味色彩、抽象母题与产区生成咖啡视觉身份卡"
+  default_prompt: "使用 $coffee-card-maker 根据咖啡名称、处理法、产区和按强弱排序的风味词，生成一张带抽象风味母题的中文或英文 3:4 咖啡视觉身份卡。"
+  brand_color: "#D94C7D"

@@ -1,0 +1,191 @@
+{
+  "version": "2.1.0",
+  "system_name": "Coffee Visual Identity System 2.1",
+  "priority": {
+    "processing_method": 0.6,
+    "flavor_notes": 0.3,
+    "origin": 0.1
+  },
+  "fallback": "neutral",
+  "detection_order": [
+    "carbonic_maceration",
+    "anaerobic",
+    "honey",
+    "washed",
+    "natural"
+  ],
+  "processing_system": {
+    "washed": {
+      "aliases": ["washed", "fully washed", "wet process", "水洗", "全水洗"],
+      "visual_identity": {
+        "keywords": ["clean", "transparent", "floral", "elegant", "high altitude", "tea-like"],
+        "keywords_zh": ["干净", "透明", "花香", "优雅", "高海拔", "茶感"],
+        "saturation": "low",
+        "temperature": "cool",
+        "contrast": "low"
+      },
+      "palette": ["#DCE7E3", "#B8D4D8", "#EFD878", "#D8C7E8", "#F3E6B3"],
+      "texture": {
+        "identity": "glass diffusion",
+        "grain": "light",
+        "blur": "soft",
+        "transparency": "high",
+        "atmosphere": ["mist", "transparent air layer", "soft blur"]
+      },
+      "renderer": {
+        "palette_influence": 0.16,
+        "chroma_scale": 0.76,
+        "lightness_shift": 0.035,
+        "temperature_shift": -0.012,
+        "contrast_scale": 0.82,
+        "warp_scale": 0.72,
+        "diffusion_scale": 1.18,
+        "grain_scale": 0.55,
+        "texture_mode": "glass_diffusion"
+      },
+      "avoid": ["neon", "heavy contrast", "dark colors"]
+    },
+    "natural": {
+      "aliases": ["natural", "dry process", "sun dried", "日晒", "干式处理"],
+      "visual_identity": {
+        "keywords": ["sunny", "fruity", "sweet", "tropical", "ripe fruit"],
+        "keywords_zh": ["阳光", "水果感", "甜感", "热带", "成熟水果"],
+        "saturation": "medium_high",
+        "temperature": "warm",
+        "contrast": "medium"
+      },
+      "palette": ["#D88A45", "#E4A45B", "#E56B5D", "#F2C56B", "#E88B9B"],
+      "texture": {
+        "identity": "sun grain",
+        "grain": "medium",
+        "blur": "warm diffusion",
+        "transparency": "medium",
+        "atmosphere": ["dry air", "warm dust", "dried fruit tactility"]
+      },
+      "renderer": {
+        "palette_influence": 0.2,
+        "chroma_scale": 1.12,
+        "lightness_shift": 0.008,
+        "temperature_shift": 0.018,
+        "contrast_scale": 1.06,
+        "warp_scale": 1.02,
+        "diffusion_scale": 1.0,
+        "grain_scale": 1.12,
+        "texture_mode": "sun_grain"
+      }
+    },
+    "honey": {
+      "aliases": ["honey process", "honey processed", "white honey", "yellow honey", "red honey", "black honey", "蜜处理", "白蜜", "黄蜜", "红蜜", "黑蜜"],
+      "visual_identity": {
+        "keywords": ["smooth", "creamy", "sweet", "silky", "balanced"],
+        "keywords_zh": ["顺滑", "奶油感", "甜润", "丝滑", "平衡"],
+        "saturation": "medium",
+        "temperature": "warm",
+        "contrast": "low_medium"
+      },
+      "palette": ["#D8A24A", "#E6BC70", "#F1DFC1", "#E8B98A"],
+      "texture": {
+        "identity": "liquid glow",
+        "grain": "soft",
+        "blur": "smooth",
+        "highlight": "soft liquid glow",
+        "atmosphere": ["silky flow", "honey movement", "soft focus"]
+      },
+      "renderer": {
+        "palette_influence": 0.22,
+        "chroma_scale": 0.94,
+        "lightness_shift": 0.025,
+        "temperature_shift": 0.02,
+        "contrast_scale": 0.9,
+        "warp_scale": 0.84,
+        "diffusion_scale": 1.12,
+        "grain_scale": 0.72,
+        "texture_mode": "liquid_glow"
+      }
+    },
+    "anaerobic": {
+      "aliases": ["anaerobic", "anaerobic fermentation", "lactic anaerobic", "厌氧", "厌氧发酵", "乳酸厌氧"],
+      "visual_identity": {
+        "keywords": ["experimental", "fermented", "explosive", "complex", "modern"],
+        "keywords_zh": ["实验感", "发酵感", "爆发力", "复杂", "现代"],
+        "saturation": "very_high",
+        "temperature": "neutral",
+        "contrast": "high"
+      },
+      "palette": ["#FF5A36", "#6258E8", "#FFD447", "#E83F6F", "#1E6BFF"],
+      "texture": {
+        "identity": "spray particle",
+        "grain": "strong",
+        "diffusion": "high",
+        "edge": "irregular",
+        "atmosphere": ["fermentation bubbles", "diffused halo", "energy particles"]
+      },
+      "renderer": {
+        "palette_influence": 0.25,
+        "chroma_scale": 1.3,
+        "lightness_shift": -0.005,
+        "temperature_shift": 0.0,
+        "contrast_scale": 1.22,
+        "warp_scale": 1.34,
+        "diffusion_scale": 0.86,
+        "grain_scale": 1.42,
+        "texture_mode": "spray_particle"
+      }
+    },
+    "carbonic_maceration": {
+      "aliases": ["carbonic maceration", "carbonic", "cm process", "二氧化碳浸渍", "碳浸渍", "碳酸浸渍"],
+      "visual_identity": {
+        "keywords": ["modern", "precise", "premium", "laboratory"],
+        "keywords_zh": ["现代", "精准", "高级", "实验室感"],
+        "saturation": "high",
+        "temperature": "cool_neutral",
+        "contrast": "medium_high"
+      },
+      "palette": ["#173F5F", "#20639B", "#3CAEA3", "#ED553B", "#F6D55C"],
+      "texture": {
+        "identity": "precision micrograin",
+        "grain": "fine",
+        "diffusion": "controlled",
+        "edge": "precise",
+        "atmosphere": ["soft metallic light", "laboratory precision"]
+      },
+      "renderer": {
+        "palette_influence": 0.24,
+        "chroma_scale": 1.14,
+        "lightness_shift": -0.012,
+        "temperature_shift": -0.008,
+        "contrast_scale": 1.14,
+        "warp_scale": 0.68,
+        "diffusion_scale": 0.78,
+        "grain_scale": 0.82,
+        "texture_mode": "precision_micrograin"
+      }
+    },
+    "neutral": {
+      "aliases": [],
+      "visual_identity": {
+        "keywords": ["balanced", "organic", "quiet"],
+        "saturation": "medium",
+        "temperature": "neutral",
+        "contrast": "medium"
+      },
+      "palette": ["#D6C6B4", "#A9B8B2", "#C98C70"],
+      "texture": {
+        "identity": "matte grain",
+        "grain": "medium",
+        "blur": "soft"
+      },
+      "renderer": {
+        "palette_influence": 0.0,
+        "chroma_scale": 1.0,
+        "lightness_shift": 0.0,
+        "temperature_shift": 0.0,
+        "contrast_scale": 1.0,
+        "warp_scale": 1.0,
+        "diffusion_scale": 1.0,
+        "grain_scale": 1.0,
+        "texture_mode": "matte_grain"
+      }
+    }
+  }
+}
