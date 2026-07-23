@@ -1,0 +1,79 @@
+{
+  "version": "2.0.0",
+  "system_name": "Flavor Semantic Color Field",
+  "highest_principle": "不要把每个风味画成一个颜色光斑，而是把所有风味组织成一个完整的感官色彩场。主风味决定画面的主色和最大面积，次要风味以衰减的方式融入其中；不同风味类别通过柔软、模糊、局部化的抽象形态进行暗示，最终形成连续、面性、柔和且具有编辑设计感的渐变构图。",
+  "default_flavor_weights": [0.42, 0.25, 0.16, 0.10, 0.07],
+  "shape_languages": {
+    "floral": {
+      "forms": ["soft incomplete petal contour field", "layered translucent petal arcs", "soft radial blooming field", "overlapping curved surfaces"],
+      "density": "light", "edge": "very_soft", "motion": "outward"
+    },
+    "citrus": {
+      "forms": ["partial rind arc", "soft radial segment", "translucent curved slice edge"],
+      "density": "medium", "edge": "soft", "motion": "radiating"
+    },
+    "berry": {
+      "forms": ["soft clustered volume", "deep central bloom", "rounded merged color mass"],
+      "density": "medium", "edge": "soft", "motion": "clustered"
+    },
+    "stone_fruit": {
+      "forms": ["large flesh-like curved plane", "soft inner-to-outer color transition", "warm enveloping surface"],
+      "density": "medium", "edge": "very_soft", "motion": "enveloping"
+    },
+    "tropical": {
+      "forms": ["fluid irregular field", "folded translucent surface", "soft directional color flow"],
+      "density": "rich", "edge": "soft", "motion": "dynamic"
+    },
+    "tea_herbal": {
+      "forms": ["thin mist layer", "floating translucent plane", "elongated soft field"],
+      "density": "light", "edge": "very_soft", "motion": "floating"
+    },
+    "chocolate_nut": {
+      "forms": ["heavy grounded color field", "slow dark-to-warm transition", "dense enveloping mass"],
+      "density": "heavy", "edge": "soft", "motion": "settling"
+    },
+    "fermented_winey": {
+      "forms": ["bleeding translucent field", "floating saturated bloom", "irregular diffused stain"],
+      "density": "rich", "edge": "soft", "motion": "drifting"
+    }
+  },
+  "visibility": {
+    "required": true,
+    "minimum_peak_alpha": 0.18,
+    "minimum_visible_coverage": 0.06,
+    "visible_alpha_threshold": 0.08,
+    "minimum_lightness_delta": 0.05,
+    "minimum_contour_peak_alpha": 0.16,
+    "minimum_contour_coverage": 0.025,
+    "minimum_contour_lightness_delta": 0.07,
+    "minimum_contour_effective_contrast": 0.05,
+    "minimum_semantic_contour_score": 0.75
+  },
+  "visual_intensity": {
+    "soft": "light color, generous air, weak form, low contrast",
+    "balanced": "clear mother color, rich continuous fields, soft directional flow",
+    "expressive": "larger fields, stronger direction and contrast, still soft-edged"
+  },
+  "gradient_styles": {
+    "semantic_fields": {
+      "description": "Default flavor-semantic color fields with clear hierarchy and abstract category forms"
+    },
+    "airy_mesh": {
+      "description": "High-key airy freeform mesh with large edge-entering lobes and a flavor-derived pale breathing region",
+      "base_lightness": [0.74, 0.82],
+      "highlight_mix": [0.38, 0.54],
+      "base_highlight_blend": [0.26, 0.38],
+      "mesh_anchor_count": [5, 7],
+      "field_blur_ratio": [0.18, 0.30],
+      "white_breathing_area": [0.20, 0.35],
+      "body_color_opacity": [0.25, 0.55],
+      "core_color_opacity": [0.08, 0.18],
+      "grain_opacity": [0.012, 0.022],
+      "hue_source": "flavor palette highlights, bodies and restrained cores only"
+    }
+  },
+  "forbidden": [
+    "literal fruit", "literal flower", "leaf icon", "line art", "visible outline",
+    "closed object silhouette", "isolated radial dots", "small fragments", "hard color bands"
+  ]
+}

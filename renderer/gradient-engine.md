@@ -1,37 +1,38 @@
-# Coffee Visual Identity Engine 2.1
+# Flavor Semantic Color Field Engine 2.0
 
-## Processing pipeline
+## Pipeline
 
-1. Detect one dominant processing method from `--processing-method` or the coffee name. Prefer the first exact alias in `detection_order`; this makes carbonic maceration and anaerobic override generic natural wording.
-2. Resolve every flavor from the unchanged 180-item `references/flavor-colors.json` table. Flavor answers “what hue is this?”.
-3. Apply the processing personality from `assets/processing-color-system.json`. Processing answers “how should this hue appear?” through palette undertone, chroma, temperature, contrast, diffusion, field warp, and texture.
-4. Select at most one main motif and one complementary auxiliary motif from `assets/flavor-motif-system.json`.
-5. Render the transformed flavor palette as multiple organic fields and blend the oversized, cropped motif fields into it.
-6. Detect origin from `--origin` or the coffee name and retain its small adjustment.
-7. Apply the processing texture pass after the motif layer.
+1. 规范化原始风味，从 180 项确定性色表解析 `primary/light/dark`。
+2. 将每个风味转换为 `core/body/highlight`、语义类别与形态语言。风味是唯一色相来源。
+3. 对指定权重 `[0.42, 0.25, 0.16, 0.10, 0.07]` 按实际风味数量归一化。
+4. 在 OKLab 中按类别亲和度、色相角和明度差聚类，最多保留 4 个独立大色域；聚类后的三色板使用成员权重在 OKLab 中混合。
+5. 选择一个主形态和最多一个辅助形态，均以超大、裁切、不闭合的标量场实现。花香使用“透明花瓣内部场 + 宽边模糊轮廓场”双层结构。
+6. 依构图 seed 生成非对称、边缘进入的大型各向异性色域，并以低频位移扭曲。
+7. 通过区域胜出而不是等量 RGB 平均进行融合，使主风味影响面积、对比、尺度、饱和度和混色权。
+8. 用主风味 `highlight` 建立过渡层，用聚类 `core` 建立克制锦点，避免互补色直接高透明重叠。
+9. 在最终尺寸加入 1.5%–4.5% 低对比细颗粒；不生成喷点、咖啡粉点、彩色纸屑或高频碎片。
+10. 在排版前运行质检；失败时使用派生 seed 重新生成，配色与主次关系不变。
 
-Conceptual priority is Processing 60% / Flavor 30% / Origin 10%. Do not interpret it as a flat RGB average. Processing dominates the visual grammar, flavor remains the hue source, and origin stays a restrained accent.
+## Floral semantic contour
 
-## Motif selection and rendering
+对每个花瓣标量场取宽度有限的等值带，而不是提取单像素边缘。对等值带单独模糊，再使用同色相但不同明度的颜色融入内部色场。用低频角度遮罩移除一个宽扇区，强制轮廓断续、不闭合并从画布边缘进入。
 
-- Choose the earliest supported flavor as `main`.
-- For `auxiliary`, prefer the earliest later flavor whose shape is listed in the main motif's `preferred_auxiliary_shapes`; otherwise choose the earliest different visual family.
-- Render no more than two motifs. Unsupported flavors still contribute color.
-- Build motifs procedurally as soft scalar fields: radial petals, organic pulp, seed burst, cluster blobs, translucent rings, mist ribbon, viscous flow, or liquid bloom.
-- Place main and auxiliary motifs on opposite edges, crop them at the canvas boundary, blur them, and blend them in OKLab using their flavor colors.
-- Never render literal fruit, flowers, food, complete objects, icons, stickers, cartoons, or hard outlines.
+将花香轮廓分数定义为峰值透明度、可见覆盖率、局部明度差和有效对比的加权分数。有效对比为 `peak alpha × lightness delta`，必须不低于 0.05，避免只检查 alpha 导致“数值存在、肉眼不可见”。四项都达标且总分不低于 0.75 才通过。`soft` 可降低对比，但不能跳过轮廓质检。
 
-## Texture mapping
+## Clustering
 
-- Washed → glass diffusion: broad translucent fields, low chroma/contrast, light grain.
-- Natural → sun grain: warm diffusion, medium-high chroma, tactile sunlit grain.
-- Honey → liquid glow: smooth fields, amber undertone, soft local glow.
-- Anaerobic → spray particle: saturated high-contrast fields, irregular warp, sparse colored particles.
-- Carbonic maceration → precision micrograin: cooler premium palette, controlled diffusion, fine grain.
-- Unknown → neutral matte grain. Preserve backward compatibility and mark detection as fallback in metadata.
+聚类需同时满足：语义类别相同或同属水果近邻组，OKLab 色相角距离不大于 32°，明度差不大于 0.18。输入顺序优先，包含第一风味的聚类始终是第一色域。
 
-## Invariant
+## Intensity invariants
 
-Never encode flavor-to-color mappings in the processing system. Peach remains peach in the flavor table; processing only changes whether peach appears transparent and pale, warm and sweet, or fluorescent and high-contrast.
+`soft/balanced/expressive` 只调整色域透明度、对比、色度、模糊、颗粒和高光。不调整三色板语义、风味排序、聚类成员、主风味占比或文字规范。
 
-Motifs encode only abstract shape metaphors. A Jasmine motif is a blurred radial petal field, not a jasmine illustration; a Passion Fruit motif is an organic seed burst, not a sliced fruit.
+## Gradient style routing
+
+`semantic_fields` 是兼容 2.0 的默认路径。`airy_mesh` 使用相同的风味解析、权重、聚类和语义母题，但将混合重心移到 `highlight`：生成 5–7 个超大边缘锚点，将 `body` 和少量 `core` 局部混入，再用所有风味高光的加权综合色建立浅色呼吸区。呼吸色只降低已有风味综合色的色度，不引入任意白、灰或参考图色相。
+
+空气模式在常规质量合同之外检查中位亮度、高亮面积、呼吸区面积和低频梯度；这样避免“参数名是 airy、结果仍然浓重”或“整张白蒙版导致风味消失”。
+
+## Quality contract
+
+`QUALITY_RULES` 是可执行合同，元数据必须保留每次尝试的 seed、度量、失败项与最终通过状态。所有质检都在文字叠加前完成，避免白色字形被误判为硬边。

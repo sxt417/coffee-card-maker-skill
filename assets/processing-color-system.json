@@ -1,6 +1,6 @@
 {
-  "version": "2.1.0",
-  "system_name": "Coffee Visual Identity System 2.1",
+  "version": "2.0.0-compat",
+  "system_name": "Flavor Semantic Color Field Processing Mood Compatibility",
   "priority": {
     "processing_method": 0.6,
     "flavor_notes": 0.3,

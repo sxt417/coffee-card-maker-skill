@@ -1,0 +1,105 @@
+{
+  "version": "2.0.0",
+  "system_name": "Flavor Semantic Color Field Composition System",
+  "organic_blob_system": {
+    "minimum_blobs": 3,
+    "maximum_blobs": 5,
+    "blur_radius_px": [80, 200],
+    "opacity": [0.34, 0.68],
+    "placement": "seeded_asymmetric_with_edge_crop",
+    "rules": [
+      "start from one breathable base color field",
+      "layer three to five large organic blobs",
+      "crop at least one blob at a canvas edge",
+      "avoid linear gradients and isolated circles",
+      "preserve the flavor order through weighted prominence"
+    ]
+  },
+  "styles": {
+    "soft_bloom": {
+      "label": "Soft Bloom",
+      "visual_language": "petal-like diffusion and quiet overlapping blooms",
+      "blob_count": [3, 4],
+      "aspect_ratio": [0.72, 1.35],
+      "edge_crop_probability": 0.56,
+      "flow_bias": "radial",
+      "preferred_processing": ["washed", "honey"],
+      "preferred_families": ["floral", "citrus", "tea_herbal"]
+    },
+    "liquid_flow": {
+      "label": "Liquid Flow",
+      "visual_language": "wide liquid color masses with slow directional movement",
+      "blob_count": [4, 5],
+      "aspect_ratio": [1.45, 2.6],
+      "edge_crop_probability": 0.64,
+      "flow_bias": "diagonal",
+      "preferred_processing": ["natural", "honey"],
+      "preferred_families": ["orchard_stone", "tropical_melon", "sweet_bakery"]
+    },
+    "color_collision": {
+      "label": "Color Collision",
+      "visual_language": "two chromatic currents meeting through a softened energetic boundary",
+      "blob_count": [4, 5],
+      "aspect_ratio": [0.82, 1.65],
+      "edge_crop_probability": 0.72,
+      "flow_bias": "opposing_edges",
+      "preferred_processing": ["anaerobic", "carbonic_maceration"],
+      "preferred_families": ["berry", "boozy_fermented", "tropical_melon"]
+    },
+    "mineral_texture": {
+      "label": "Mineral Texture",
+      "visual_language": "layered sediment-like color masses with tactile granular depth",
+      "blob_count": [3, 5],
+      "aspect_ratio": [0.68, 1.55],
+      "edge_crop_probability": 0.52,
+      "flow_bias": "clustered",
+      "preferred_processing": ["anaerobic", "neutral"],
+      "preferred_families": ["nuts_cocoa", "spice", "roasted_woody"]
+    },
+    "coffee_landscape": {
+      "label": "Coffee Landscape",
+      "visual_language": "cropped horizontal atmospheric fields abstracted from coffee terrain",
+      "blob_count": [3, 5],
+      "aspect_ratio": [1.7, 3.0],
+      "edge_crop_probability": 0.68,
+      "flow_bias": "horizontal",
+      "preferred_processing": ["natural", "washed", "neutral"],
+      "preferred_families": ["tea_herbal", "roasted_woody", "orchard_stone"]
+    }
+  },
+  "flavor_hierarchy": {
+    "light": {
+      "families": ["floral", "citrus", "tea_herbal"],
+      "keywords": ["jasmine", "floral", "lemon", "bergamot", "tea"],
+      "opacity_scale": 0.86,
+      "contrast_scale": 0.84,
+      "texture_scale": 0.72,
+      "air_space": "high"
+    },
+    "medium": {
+      "families": ["berry", "orchard_stone", "tropical_melon", "dried_fruit", "sweet_bakery"],
+      "keywords": ["berry", "peach", "apricot", "tropical", "honey", "caramel"],
+      "opacity_scale": 1.0,
+      "contrast_scale": 1.0,
+      "texture_scale": 1.0,
+      "air_space": "medium"
+    },
+    "heavy": {
+      "families": ["nuts_cocoa", "boozy_fermented", "roasted_woody", "spice"],
+      "keywords": ["chocolate", "cocoa", "fermented", "wine", "rum", "tobacco", "earthy"],
+      "opacity_scale": 1.12,
+      "contrast_scale": 1.16,
+      "texture_scale": 1.25,
+      "air_space": "low_medium"
+    }
+  },
+  "material_texture": {
+    "opacity": [0.1, 0.15],
+    "layers": ["fine_noise", "paper_fiber", "coffee_powder_particles"],
+    "rules": [
+      "texture must remain secondary to color and motif",
+      "paper fiber is broad and low contrast",
+      "coffee powder particles are sparse and never decorative confetti"
+    ]
+  }
+}
